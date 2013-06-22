@@ -1,0 +1,7 @@
+Cose da fare:
+ - leggere una riga del calendario ed estrarre: data
+ - estrarre il primo rifiuto
+ - leggere tante righe di calendario
+ - configuare una UICellView che usa le info
+ - collegare la uitableview all'oggetto
+ - all'avvio scrollare alla data corrente

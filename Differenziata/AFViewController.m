@@ -26,4 +26,25 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (NSInteger)tableView:(UITableView *)tableView
+ numberOfRowsInSection:(NSInteger)section
+{
+    return 4;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView
+cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView registerClass:[UITableViewCell class]
+      forCellReuseIdentifier:@"def"];
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"def"];
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"rifiuto %d",
+                           indexPath.row];
+    
+    return cell;
+}
+
+
+
 @end
