@@ -1,7 +1,21 @@
 Cose da fare:
- - leggere una riga del calendario ed estrarre: data
- - estrarre il primo rifiuto
- - leggere tante righe di calendario
- - configuare una UICellView che usa le info
- - collegare la uitableview all'oggetto
+ x leggere una riga del calendario ed estrarre: data
+ x estrarre il primo rifiuto
+ x leggere tante righe di calendario
+ x configuare una UICellView che usa le info
+ x collegare la uitableview all'oggetto
+ - mettere i colori
  - all'avvio scrollare alla data corrente
+ - mettere i giorni della settimana
+ 
+ 
+COLORI:
+
+umido - verde
+secco - giallo
+plastica - rosino
+carta - rosso
+vetro - azzurrino
+legno - marrone
+olio domestico - verde oliva chiaro
+elettrodomestici - violino

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		650DCACC177708020004C4DE /* AFParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 650DCACB177708020004C4DE /* AFParser.m */; };
+		650DCACF177742C00004C4DE /* AFDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 650DCACE177742C00004C4DE /* AFDay.m */; };
 		654A3976177645A700D0F06D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654A3975177645A700D0F06D /* UIKit.framework */; };
 		654A3978177645A700D0F06D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654A3977177645A700D0F06D /* Foundation.framework */; };
 		654A397A177645A700D0F06D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654A3979177645A700D0F06D /* CoreGraphics.framework */; };
@@ -25,6 +27,10 @@
 		654A39A7177645A800D0F06D /* DifferenziataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 654A39A6177645A800D0F06D /* DifferenziataTests.m */; };
 		654A39B2177645F400D0F06D /* calendario.txt in Resources */ = {isa = PBXBuildFile; fileRef = 654A39B0177645F400D0F06D /* calendario.txt */; };
 		654A39B3177645F400D0F06D /* TODO.txt in Resources */ = {isa = PBXBuildFile; fileRef = 654A39B1177645F400D0F06D /* TODO.txt */; };
+		65CB4CD317764D68003C8D42 /* DDFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CB4CD217764B48003C8D42 /* DDFileReader.m */; };
+		65CB4CD417764DE2003C8D42 /* DDFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CB4CD217764B48003C8D42 /* DDFileReader.m */; };
+		65DAD5CD17778C840011D95E /* AFDayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DAD5CC17778C840011D95E /* AFDayCell.m */; };
+		65DAD5D21777902D0011D95E /* AFDayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65DAD5D11777902D0011D95E /* AFDayCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		650DCACA177708020004C4DE /* AFParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFParser.h; sourceTree = "<group>"; };
+		650DCACB177708020004C4DE /* AFParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFParser.m; sourceTree = "<group>"; };
+		650DCACD177742C00004C4DE /* AFDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFDay.h; sourceTree = "<group>"; };
+		650DCACE177742C00004C4DE /* AFDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFDay.m; sourceTree = "<group>"; };
 		654A3972177645A700D0F06D /* Differenziata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Differenziata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		654A3975177645A700D0F06D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		654A3977177645A700D0F06D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -62,6 +72,11 @@
 		654A39A6177645A800D0F06D /* DifferenziataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DifferenziataTests.m; sourceTree = "<group>"; };
 		654A39B0177645F400D0F06D /* calendario.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = calendario.txt; sourceTree = "<group>"; };
 		654A39B1177645F400D0F06D /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO.txt; sourceTree = "<group>"; };
+		65CB4CD117764B48003C8D42 /* DDFileReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDFileReader.h; sourceTree = "<group>"; };
+		65CB4CD217764B48003C8D42 /* DDFileReader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDFileReader.m; sourceTree = "<group>"; };
+		65DAD5CB17778C840011D95E /* AFDayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFDayCell.h; sourceTree = "<group>"; };
+		65DAD5CC17778C840011D95E /* AFDayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFDayCell.m; sourceTree = "<group>"; };
+		65DAD5D11777902D0011D95E /* AFDayCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AFDayCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,10 +138,10 @@
 			children = (
 				654A3984177645A700D0F06D /* AFAppDelegate.h */,
 				654A3985177645A700D0F06D /* AFAppDelegate.m */,
-				654A398D177645A800D0F06D /* AFViewController.h */,
-				654A398E177645A800D0F06D /* AFViewController.m */,
-				654A3990177645A800D0F06D /* AFViewController.xib */,
+				65DAD5D017778CDD0011D95E /* ui */,
 				654A397C177645A700D0F06D /* Supporting Files */,
+				65DAD5CF17778CBC0011D95E /* lib */,
+				65DAD5CE17778CAF0011D95E /* logic */,
 			);
 			path = Differenziata;
 			sourceTree = "<group>";
@@ -164,6 +179,39 @@
 				654A39A2177645A800D0F06D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		65DAD5CE17778CAF0011D95E /* logic */ = {
+			isa = PBXGroup;
+			children = (
+				650DCACA177708020004C4DE /* AFParser.h */,
+				650DCACB177708020004C4DE /* AFParser.m */,
+				650DCACD177742C00004C4DE /* AFDay.h */,
+				650DCACE177742C00004C4DE /* AFDay.m */,
+			);
+			name = logic;
+			sourceTree = "<group>";
+		};
+		65DAD5CF17778CBC0011D95E /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				65CB4CD117764B48003C8D42 /* DDFileReader.h */,
+				65CB4CD217764B48003C8D42 /* DDFileReader.m */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+		65DAD5D017778CDD0011D95E /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				654A398D177645A800D0F06D /* AFViewController.h */,
+				654A398E177645A800D0F06D /* AFViewController.m */,
+				654A3990177645A800D0F06D /* AFViewController.xib */,
+				65DAD5CB17778C840011D95E /* AFDayCell.h */,
+				65DAD5CC17778C840011D95E /* AFDayCell.m */,
+				65DAD5D11777902D0011D95E /* AFDayCell.xib */,
+			);
+			name = ui;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +293,7 @@
 				654A3992177645A800D0F06D /* AFViewController.xib in Resources */,
 				654A39B2177645F400D0F06D /* calendario.txt in Resources */,
 				654A39B3177645F400D0F06D /* TODO.txt in Resources */,
+				65DAD5D21777902D0011D95E /* AFDayCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,9 +328,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65CB4CD417764DE2003C8D42 /* DDFileReader.m in Sources */,
 				654A3982177645A700D0F06D /* main.m in Sources */,
 				654A3986177645A700D0F06D /* AFAppDelegate.m in Sources */,
 				654A398F177645A800D0F06D /* AFViewController.m in Sources */,
+				650DCACC177708020004C4DE /* AFParser.m in Sources */,
+				650DCACF177742C00004C4DE /* AFDay.m in Sources */,
+				65DAD5CD17778C840011D95E /* AFDayCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +342,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65CB4CD317764D68003C8D42 /* DDFileReader.m in Sources */,
 				654A39A7177645A800D0F06D /* DifferenziataTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,6 +516,7 @@
 				654A39AC177645A800D0F06D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		654A39AD177645A800D0F06D /* Build configuration list for PBXNativeTarget "DifferenziataTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +525,7 @@
 				654A39AF177645A800D0F06D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

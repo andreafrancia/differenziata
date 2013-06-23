@@ -7,17 +7,24 @@
 //
 
 #import "AFViewController.h"
+#import "AFParser.h"
+#import "AFDayCell.h"
 
 @interface AFViewController ()
 
 @end
 
-@implementation AFViewController
+@implementation AFViewController {
+    AFParser * parser;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    parser = [AFParser new];
+    [parser parseFile:[[NSBundle mainBundle] pathForResource:@"calendario.txt"
+                                                     ofType:@""]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -29,19 +36,23 @@
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    return 4;
+    return parser.result.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
 cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [tableView registerClass:[UITableViewCell class]
-      forCellReuseIdentifier:@"def"];
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"def"];
+    AFDay * day = parser.result[indexPath.row];
+
+    UINib * nib = [UINib nibWithNibName:@"AFDayCell" bundle:nil];
+    [tableView registerNib:nib forCellReuseIdentifier:@"day"];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"rifiuto %d",
-                           indexPath.row];
+    AFDayCell * cell = [tableView dequeueReusableCellWithIdentifier:@"day"];
     
+    cell.dateLabel.text = day.humanDate;
+    cell.kindLabel.text = day.what;
+    
+    cell.kindLabel.backgroundColor = [UIColor brownColor];
     return cell;
 }
 
