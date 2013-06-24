@@ -4,8 +4,8 @@ Cose da fare:
  x leggere tante righe di calendario
  x configuare una UICellView che usa le info
  x collegare la uitableview all'oggetto
- x mettere i colori
+ x mettere i colori: 1 pom
+ x bug errore ultima cella: <1pom
  - all'avvio scrollare alla data corrente
  - mettere i giorni della settimana
  - togliere che si possono selezionare
- - bug errore ultima cella
