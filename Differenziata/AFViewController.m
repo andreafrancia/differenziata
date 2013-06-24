@@ -52,7 +52,17 @@ cellForRowAtIndexPath:(NSIndexPath *)indexPath
     cell.dateLabel.text = day.humanDate;
     cell.kindLabel.text = day.what;
     
-    cell.kindLabel.backgroundColor = [UIColor brownColor];
+    NSDictionary * colors = @{
+                             @"umido": [UIColor greenColor],
+                             @"carta": [UIColor magentaColor],
+                             @"secco": [UIColor yellowColor],
+                             @"ingombranti": [UIColor lightGrayColor],
+                             @"plastica": [UIColor redColor],
+                             @"vetro alluminio": [UIColor cyanColor],
+                             @"legno ferro": [UIColor brownColor],
+                             @"olio domestico": [UIColor orangeColor],
+                            };
+    cell.kindLabel.backgroundColor = colors[day.what];
     return cell;
 }
 

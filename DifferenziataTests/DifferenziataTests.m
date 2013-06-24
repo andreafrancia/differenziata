@@ -8,6 +8,7 @@
 
 #import "DifferenziataTests.h"
 #import "AFParser.h"
+#import <UIKit/UIKit.h>
 
 @implementation DifferenziataTests {
     AFParser * parser;

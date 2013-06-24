@@ -4,18 +4,8 @@ Cose da fare:
  x leggere tante righe di calendario
  x configuare una UICellView che usa le info
  x collegare la uitableview all'oggetto
- - mettere i colori
+ x mettere i colori
  - all'avvio scrollare alla data corrente
  - mettere i giorni della settimana
- 
- 
-COLORI:
-
-umido - verde
-secco - giallo
-plastica - rosino
-carta - rosso
-vetro - azzurrino
-legno - marrone
-olio domestico - verde oliva chiaro
-elettrodomestici - violino
+ - togliere che si possono selezionare
+ - bug errore ultima cella
