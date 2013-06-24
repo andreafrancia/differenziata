@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		650DCACC177708020004C4DE /* AFParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 650DCACB177708020004C4DE /* AFParser.m */; };
 		650DCACF177742C00004C4DE /* AFDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 650DCACE177742C00004C4DE /* AFDay.m */; };
+		65207E141778EBDE006255D4 /* recycle.png in Resources */ = {isa = PBXBuildFile; fileRef = 65207E131778EBDE006255D4 /* recycle.png */; };
+		65207E16177972A0006255D4 /* recycle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65207E15177972A0006255D4 /* recycle@2x.png */; };
 		654A3976177645A700D0F06D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654A3975177645A700D0F06D /* UIKit.framework */; };
 		654A3978177645A700D0F06D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654A3977177645A700D0F06D /* Foundation.framework */; };
 		654A397A177645A700D0F06D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654A3979177645A700D0F06D /* CoreGraphics.framework */; };
@@ -48,6 +50,8 @@
 		650DCACB177708020004C4DE /* AFParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFParser.m; sourceTree = "<group>"; };
 		650DCACD177742C00004C4DE /* AFDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFDay.h; sourceTree = "<group>"; };
 		650DCACE177742C00004C4DE /* AFDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFDay.m; sourceTree = "<group>"; };
+		65207E131778EBDE006255D4 /* recycle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recycle.png; sourceTree = "<group>"; };
+		65207E15177972A0006255D4 /* recycle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recycle@2x.png"; sourceTree = "<group>"; };
 		654A3972177645A700D0F06D /* Differenziata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Differenziata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		654A3975177645A700D0F06D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		654A3977177645A700D0F06D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -106,6 +110,8 @@
 		654A3969177645A700D0F06D = {
 			isa = PBXGroup;
 			children = (
+				65207E15177972A0006255D4 /* recycle@2x.png */,
+				65207E131778EBDE006255D4 /* recycle.png */,
 				654A397B177645A700D0F06D /* Differenziata */,
 				654A399F177645A800D0F06D /* DifferenziataTests */,
 				654A3974177645A700D0F06D /* Frameworks */,
@@ -294,6 +300,8 @@
 				654A39B2177645F400D0F06D /* calendario.txt in Resources */,
 				654A39B3177645F400D0F06D /* TODO.txt in Resources */,
 				65DAD5D21777902D0011D95E /* AFDayCell.xib in Resources */,
+				65207E141778EBDE006255D4 /* recycle.png in Resources */,
+				65207E16177972A0006255D4 /* recycle@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

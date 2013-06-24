@@ -6,6 +6,7 @@ Cose da fare:
  x collegare la uitableview all'oggetto
  x mettere i colori: 1 pom
  x bug errore ultima cella: <1pom
+ - icona
  - all'avvio scrollare alla data corrente
  - mettere i giorni della settimana
  - togliere che si possono selezionare
