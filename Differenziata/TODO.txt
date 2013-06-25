@@ -6,8 +6,11 @@ Cose da fare:
  x collegare la uitableview all'oggetto
  x mettere i colori: 1 pom
  x bug errore ultima cella: <1pom
- x icona
- x togliere la selezione delle celle
- - all'avvio scrollare alla data corrente
+ x icona [done:25 jun]
+ x togliere la selezione delle celle [done: 25 jun]
+ - all'avvio scrollare alla data corrente 
+    x imparato come si fa a scrollare all'avvio
+    - index row della data corrente
+    - binding
  - mettere i giorni della settimana
  - togliere che si possono selezionare

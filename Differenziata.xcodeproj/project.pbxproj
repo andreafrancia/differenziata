@@ -75,7 +75,7 @@
 		654A39A5177645A800D0F06D /* DifferenziataTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DifferenziataTests.h; sourceTree = "<group>"; };
 		654A39A6177645A800D0F06D /* DifferenziataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DifferenziataTests.m; sourceTree = "<group>"; };
 		654A39B0177645F400D0F06D /* calendario.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = calendario.txt; sourceTree = "<group>"; };
-		654A39B1177645F400D0F06D /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO.txt; sourceTree = "<group>"; };
+		654A39B1177645F400D0F06D /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TODO.txt; path = Differenziata/TODO.txt; sourceTree = "<group>"; };
 		65CB4CD117764B48003C8D42 /* DDFileReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDFileReader.h; sourceTree = "<group>"; };
 		65CB4CD217764B48003C8D42 /* DDFileReader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDFileReader.m; sourceTree = "<group>"; };
 		65DAD5CB17778C840011D95E /* AFDayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFDayCell.h; sourceTree = "<group>"; };
@@ -110,6 +110,7 @@
 		654A3969177645A700D0F06D = {
 			isa = PBXGroup;
 			children = (
+				654A39B1177645F400D0F06D /* TODO.txt */,
 				65207E15177972A0006255D4 /* recycle@2x.png */,
 				65207E131778EBDE006255D4 /* recycle.png */,
 				654A397B177645A700D0F06D /* Differenziata */,
@@ -156,7 +157,6 @@
 			isa = PBXGroup;
 			children = (
 				654A39B0177645F400D0F06D /* calendario.txt */,
-				654A39B1177645F400D0F06D /* TODO.txt */,
 				654A397D177645A700D0F06D /* Differenziata-Info.plist */,
 				654A397E177645A700D0F06D /* InfoPlist.strings */,
 				654A3981177645A700D0F06D /* main.m */,

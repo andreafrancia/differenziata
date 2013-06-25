@@ -18,6 +18,13 @@
     AFParser * parser;
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    NSIndexPath * indexPath = [NSIndexPath indexPathForRow:9 inSection:0];
+    [self.table scrollToRowAtIndexPath:indexPath
+                      atScrollPosition:UITableViewScrollPositionTop
+                              animated:YES];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

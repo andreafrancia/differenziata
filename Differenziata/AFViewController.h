@@ -10,5 +10,5 @@
 
 @interface AFViewController : UIViewController<UITableViewDataSource,
                                                UITableViewDelegate>
-
+@property (strong, nonatomic) IBOutlet UITableView *table;
 @end
