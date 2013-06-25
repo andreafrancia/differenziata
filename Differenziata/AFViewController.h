@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AFViewController : UIViewController<UITableViewDataSource>
+@interface AFViewController : UIViewController<UITableViewDataSource,
+                                               UITableViewDelegate>
 
 @end

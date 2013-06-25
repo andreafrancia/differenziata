@@ -66,6 +66,11 @@ cellForRowAtIndexPath:(NSIndexPath *)indexPath
     return cell;
 }
 
+#pragma mark Disable selection
+- (NSIndexPath *)tableView:(UITableView *)tableView
+  willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    return nil;
+}
 
 
 @end
