@@ -28,7 +28,6 @@
 		654A399C177645A800D0F06D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654A3977177645A700D0F06D /* Foundation.framework */; };
 		654A39A4177645A800D0F06D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 654A39A2177645A800D0F06D /* InfoPlist.strings */; };
 		654A39A7177645A800D0F06D /* DifferenziataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 654A39A6177645A800D0F06D /* DifferenziataTests.m */; };
-		654A39B2177645F400D0F06D /* calendario.txt in Resources */ = {isa = PBXBuildFile; fileRef = 654A39B0177645F400D0F06D /* calendario.txt */; };
 		654A39B3177645F400D0F06D /* TODO.txt in Resources */ = {isa = PBXBuildFile; fileRef = 654A39B1177645F400D0F06D /* TODO.txt */; };
 		65CB4CD317764D68003C8D42 /* DDFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CB4CD217764B48003C8D42 /* DDFileReader.m */; };
 		65CB4CD417764DE2003C8D42 /* DDFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CB4CD217764B48003C8D42 /* DDFileReader.m */; };
@@ -76,7 +75,6 @@
 		654A39A3177645A800D0F06D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		654A39A5177645A800D0F06D /* DifferenziataTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DifferenziataTests.h; sourceTree = "<group>"; };
 		654A39A6177645A800D0F06D /* DifferenziataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DifferenziataTests.m; sourceTree = "<group>"; };
-		654A39B0177645F400D0F06D /* calendario.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = calendario.txt; sourceTree = "<group>"; };
 		654A39B1177645F400D0F06D /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TODO.txt; path = Differenziata/TODO.txt; sourceTree = "<group>"; };
 		65CB4CD117764B48003C8D42 /* DDFileReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDFileReader.h; sourceTree = "<group>"; };
 		65CB4CD217764B48003C8D42 /* DDFileReader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDFileReader.m; sourceTree = "<group>"; };
@@ -159,7 +157,6 @@
 			isa = PBXGroup;
 			children = (
 				6505EBAA177B4416002D7428 /* calendario.csv */,
-				654A39B0177645F400D0F06D /* calendario.txt */,
 				654A397D177645A700D0F06D /* Differenziata-Info.plist */,
 				654A397E177645A700D0F06D /* InfoPlist.strings */,
 				654A3981177645A700D0F06D /* main.m */,
@@ -300,7 +297,6 @@
 				654A398A177645A800D0F06D /* Default@2x.png in Resources */,
 				654A398C177645A800D0F06D /* Default-568h@2x.png in Resources */,
 				654A3992177645A800D0F06D /* AFViewController.xib in Resources */,
-				654A39B2177645F400D0F06D /* calendario.txt in Resources */,
 				654A39B3177645F400D0F06D /* TODO.txt in Resources */,
 				65DAD5D21777902D0011D95E /* AFDayCell.xib in Resources */,
 				65207E141778EBDE006255D4 /* recycle.png in Resources */,

@@ -33,21 +33,11 @@
 {
     [parser parseFile: [self pathFor:@"calendario.csv"]];
     
-    AFDay * sixth = parser.result[46];
+    NSInteger dec31index = [parser.result count] - 1;
+    AFDay * dec31 = parser.result[dec31index];
     
-    STAssertEqualObjects(@"2013-08-16" , sixth.date, nil);
-    STAssertEqualObjects(@"umido",       sixth.what, nil);
-}
-
-
-- (void) test_should_read_from_a_tsv_file
-{
-    [parser parseFile: [self pathFor:@"calendario.txt"]];
-    
-    AFDay * sixth = parser.result[15];
-
-    STAssertEqualObjects(@"2013-07-06" , sixth.date, nil);
-    STAssertEqualObjects(@"ingombranti", sixth.what, nil);
+    STAssertEqualObjects(@"2013-12-31" , dec31.date, nil);
+    STAssertEqualObjects(@"carta",       dec31.what, nil);
 }
 
 -(NSString*)pathFor:(NSString*)filename
