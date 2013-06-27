@@ -10,7 +10,13 @@
 #import "AFDay.h"
 
 @interface AFParser: NSObject
+
 @property(readonly,nonatomic) NSArray* result;
+
 -(void) parseLine:(NSString*)line;
 -(void) parseFile:(NSString*) path;
+
+- (void) todayIs:(NSDate*)date;
+- (NSUInteger) todayIndex;
+
 @end

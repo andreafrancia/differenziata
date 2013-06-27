@@ -9,9 +9,25 @@
 #import "AFParser.h"
 #import "DDFileReader.h"
 #import "AFDay.h"
+#import "NSDate+iso8601.h"
 
 @implementation AFParser {
     NSMutableArray* _result;
+    NSDate * _today;
+}
+
+- (void) todayIs:(NSDate*)date
+{
+    _today = date;
+}
+
+- (NSUInteger) todayIndex
+{
+    return [_result indexOfObjectPassingTest:
+            ^BOOL(AFDay* day, NSUInteger idx, BOOL*stop)
+    {
+        return [day.date isEqualToString:[_today toIso8601]];
+    }];
 }
 
 -(id) init
@@ -20,6 +36,11 @@
         _result = [NSMutableArray new];
     }
     return self;
+}
+
+-(NSInteger) indexOf:(NSDate*) date
+{
+    return 0;
 }
 
 -(void) parseLine:(NSString*)line
