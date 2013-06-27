@@ -65,8 +65,8 @@ cellForRowAtIndexPath:(NSIndexPath *)indexPath
                              @"secco": [UIColor yellowColor],
                              @"ingombranti": [UIColor lightGrayColor],
                              @"plastica": [UIColor redColor],
-                             @"vetro alluminio": [UIColor cyanColor],
-                             @"legno ferro": [UIColor brownColor],
+                             @"vetro - alluminio": [UIColor cyanColor],
+                             @"legno - ferro": [UIColor brownColor],
                              @"olio domestico": [UIColor orangeColor],
                             };
     cell.kindLabel.backgroundColor = colors[day.what];
