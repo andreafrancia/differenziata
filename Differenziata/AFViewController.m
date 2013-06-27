@@ -19,7 +19,21 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    NSIndexPath * indexPath = [NSIndexPath indexPathForRow:9 inSection:0];
+    [self scrollToTodayRow];
+}
+
+- (void)applicationWillEnterForeground:(UIApplication *)application
+{
+    [self scrollToTodayRow];
+}
+
+- (void)scrollToTodayRow
+{
+    [parser todayIs:[NSDate date]];
+    NSInteger todayIndex = [parser todayIndex];
+    
+    NSIndexPath * indexPath = [NSIndexPath indexPathForRow:todayIndex
+                                                 inSection:0];
     [self.table scrollToRowAtIndexPath:indexPath
                       atScrollPosition:UITableViewScrollPositionTop
                               animated:YES];
