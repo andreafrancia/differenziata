@@ -12,5 +12,6 @@ Cose da fare:
     x imparato come si fa a scrollare all'avvio
     - index row della data corrente
     - binding
+    - imparare a come scrollare al rientro nell'app
  - mettere i giorni della settimana
  - togliere che si possono selezionare

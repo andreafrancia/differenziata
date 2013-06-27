@@ -30,7 +30,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     parser = [AFParser new];
-    [parser parseFile:[[NSBundle mainBundle] pathForResource:@"calendario.txt"
+    [parser parseFile:[[NSBundle mainBundle] pathForResource:@"calendario.csv"
                                                      ofType:@""]];
 }
 
@@ -43,7 +43,7 @@
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    return parser.result.count;
+    return [parser.result count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView

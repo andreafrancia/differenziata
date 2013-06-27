@@ -26,6 +26,7 @@
 {
     AFDay * day = [AFDay new];
     
+    line = [line stringByReplacingOccurrencesOfString:@"," withString:@"\t"];
     NSArray * split = [line componentsSeparatedByString:@"\t"];
     
     day.date = split[0];

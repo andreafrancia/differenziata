@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6505EBAB177B4416002D7428 /* calendario.csv in Resources */ = {isa = PBXBuildFile; fileRef = 6505EBAA177B4416002D7428 /* calendario.csv */; };
 		650DCACC177708020004C4DE /* AFParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 650DCACB177708020004C4DE /* AFParser.m */; };
 		650DCACF177742C00004C4DE /* AFDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 650DCACE177742C00004C4DE /* AFDay.m */; };
 		65207E141778EBDE006255D4 /* recycle.png in Resources */ = {isa = PBXBuildFile; fileRef = 65207E131778EBDE006255D4 /* recycle.png */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6505EBAA177B4416002D7428 /* calendario.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = calendario.csv; sourceTree = "<group>"; };
 		650DCACA177708020004C4DE /* AFParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFParser.h; sourceTree = "<group>"; };
 		650DCACB177708020004C4DE /* AFParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFParser.m; sourceTree = "<group>"; };
 		650DCACD177742C00004C4DE /* AFDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFDay.h; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 		654A397C177645A700D0F06D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6505EBAA177B4416002D7428 /* calendario.csv */,
 				654A39B0177645F400D0F06D /* calendario.txt */,
 				654A397D177645A700D0F06D /* Differenziata-Info.plist */,
 				654A397E177645A700D0F06D /* InfoPlist.strings */,
@@ -302,6 +305,7 @@
 				65DAD5D21777902D0011D95E /* AFDayCell.xib in Resources */,
 				65207E141778EBDE006255D4 /* recycle.png in Resources */,
 				65207E16177972A0006255D4 /* recycle@2x.png in Resources */,
+				6505EBAB177B4416002D7428 /* calendario.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

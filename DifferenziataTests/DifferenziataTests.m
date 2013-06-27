@@ -19,13 +19,34 @@
     parser = [AFParser new];
 }
 
-- (void) test_should_read_from_a_file
+- (void) test_should_accept_comma_as_separator
+{
+    [parser parseLine: @"2010-06-15,sporco"];
+    
+    AFDay * parsed = parser.result[0];
+    
+    STAssertEqualObjects(@"2010-06-15", parsed.date, nil);
+    STAssertEqualObjects(@"sporco",      parsed.what, nil);   
+}
+
+- (void) test_should_read_from_a_csv_file
+{
+    [parser parseFile: [self pathFor:@"calendario.csv"]];
+    
+    AFDay * sixth = parser.result[46];
+    
+    STAssertEqualObjects(@"2013-08-16" , sixth.date, nil);
+    STAssertEqualObjects(@"umido",       sixth.what, nil);
+}
+
+
+- (void) test_should_read_from_a_tsv_file
 {
     [parser parseFile: [self pathFor:@"calendario.txt"]];
     
-    AFDay * sixth = parser.result[5];
+    AFDay * sixth = parser.result[15];
 
-    STAssertEqualObjects(@"2013-07-06", sixth.date, nil);
+    STAssertEqualObjects(@"2013-07-06" , sixth.date, nil);
     STAssertEqualObjects(@"ingombranti", sixth.what, nil);
 }
 
@@ -37,7 +58,7 @@
 
 - (void) test_should_parse_single_item
 {
-    [parser parseLine: @"2013-06-15	umido"];
+    [parser parseLine: @"2013-06-15\tumido"];
 
     AFDay * parsed = parser.result[0];
     
@@ -47,8 +68,8 @@
 
 - (void) test_should_parse_multiple_lines
 {
-    [parser parseLine: @"2013-07-15	umido"];
-    [parser parseLine: @"2013-07-16	secco"];
+    [parser parseLine: @"2013-07-15\tumido"];
+    [parser parseLine: @"2013-07-16\tsecco"];
 
     AFDay * first = parser.result[0];
     AFDay * second = parser.result[1];
