@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6505EBAB177B4416002D7428 /* calendario.csv in Resources */ = {isa = PBXBuildFile; fileRef = 6505EBAA177B4416002D7428 /* calendario.csv */; };
+		6505EBAE177C5F3A002D7428 /* NSDate+iso8601.m in Sources */ = {isa = PBXBuildFile; fileRef = 6505EBAD177C5F3A002D7428 /* NSDate+iso8601.m */; };
 		650DCACC177708020004C4DE /* AFParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 650DCACB177708020004C4DE /* AFParser.m */; };
 		650DCACF177742C00004C4DE /* AFDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 650DCACE177742C00004C4DE /* AFDay.m */; };
 		65207E141778EBDE006255D4 /* recycle.png in Resources */ = {isa = PBXBuildFile; fileRef = 65207E131778EBDE006255D4 /* recycle.png */; };
@@ -47,6 +48,8 @@
 
 /* Begin PBXFileReference section */
 		6505EBAA177B4416002D7428 /* calendario.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = calendario.csv; sourceTree = "<group>"; };
+		6505EBAC177C5F3A002D7428 /* NSDate+iso8601.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+iso8601.h"; sourceTree = "<group>"; };
+		6505EBAD177C5F3A002D7428 /* NSDate+iso8601.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+iso8601.m"; sourceTree = "<group>"; };
 		650DCACA177708020004C4DE /* AFParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFParser.h; sourceTree = "<group>"; };
 		650DCACB177708020004C4DE /* AFParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFParser.m; sourceTree = "<group>"; };
 		650DCACD177742C00004C4DE /* AFDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFDay.h; sourceTree = "<group>"; };
@@ -194,6 +197,8 @@
 				650DCACB177708020004C4DE /* AFParser.m */,
 				650DCACD177742C00004C4DE /* AFDay.h */,
 				650DCACE177742C00004C4DE /* AFDay.m */,
+				6505EBAC177C5F3A002D7428 /* NSDate+iso8601.h */,
+				6505EBAD177C5F3A002D7428 /* NSDate+iso8601.m */,
 			);
 			name = logic;
 			sourceTree = "<group>";
@@ -343,6 +348,7 @@
 				650DCACC177708020004C4DE /* AFParser.m in Sources */,
 				650DCACF177742C00004C4DE /* AFDay.m in Sources */,
 				65DAD5CD17778C840011D95E /* AFDayCell.m in Sources */,
+				6505EBAE177C5F3A002D7428 /* NSDate+iso8601.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

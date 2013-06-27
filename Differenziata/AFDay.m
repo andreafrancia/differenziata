@@ -7,15 +7,14 @@
 //
 
 #import "AFDay.h"
+#import "NSDate+iso8601.h"
 
 @implementation AFDay
 
 -(NSString*) humanDate
 {
     
-    NSDateFormatter * f = [NSDateFormatter new];
-    [f setDateFormat:@"yyyy-MM-dd"];
-    NSDate * d = [f dateFromString:self.date];
+    NSDate * d = [NSDate fromIso8601:self.date];
     
     NSDateFormatter * o = [NSDateFormatter new];
     [o setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"it_IT"]];

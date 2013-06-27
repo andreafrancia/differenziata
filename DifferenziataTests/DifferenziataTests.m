@@ -8,6 +8,7 @@
 
 #import "DifferenziataTests.h"
 #import "AFParser.h"
+#import "NSDate+iso8601.h"
 #import <UIKit/UIKit.h>
 
 @implementation DifferenziataTests {
@@ -17,6 +18,13 @@
 - (void)setUp
 {
     parser = [AFParser new];
+}
+
+- (void) test_how_to_get_today_date
+{
+    NSDate * date = [NSDate fromIso8601:@"2013-09-08"];
+    
+    STAssertEqualObjects(@"2013-09-08", [date toIso8601], nil);
 }
 
 - (void) test_should_accept_comma_as_separator
