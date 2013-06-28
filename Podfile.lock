@@ -1,0 +1,13 @@
+PODS:
+  - MLPAccessoryBadge (0.9)
+  - UIColor+MLPFlatColors (1.0)
+
+DEPENDENCIES:
+  - MLPAccessoryBadge (~> 0.9)
+  - UIColor+MLPFlatColors (~> 1.0)
+
+SPEC CHECKSUMS:
+  MLPAccessoryBadge: 5910d5372d35ae96ae6268253c910032153e0f2d
+  UIColor+MLPFlatColors: 8631d7f050b0e5afd9af178a60319891c5113d0e
+
+COCOAPODS: 0.20.2

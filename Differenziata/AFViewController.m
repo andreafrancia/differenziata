@@ -9,6 +9,8 @@
 #import "AFViewController.h"
 #import "AFParser.h"
 #import "AFDayCell.h"
+#import "MLPAccessoryBadge.h"
+#import "UIColor+MLPFlatColors.h"
 
 @interface AFViewController ()
 
@@ -67,23 +69,33 @@ cellForRowAtIndexPath:(NSIndexPath *)indexPath
 
     UINib * nib = [UINib nibWithNibName:@"AFDayCell" bundle:nil];
     [tableView registerNib:nib forCellReuseIdentifier:@"day"];
+    [tableView registerClass:[UITableViewCell class]
+      forCellReuseIdentifier:@"acc"];
     
-    AFDayCell * cell = [tableView dequeueReusableCellWithIdentifier:@"day"];
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"acc"];
     
-    cell.dateLabel.text = day.humanDate;
-    cell.kindLabel.text = day.what;
-    
+    cell.textLabel.text = day.humanDate;
+
+    MLPAccessoryBadge *accessoryBadge = [MLPAccessoryBadge new];
+    [accessoryBadge setText:day.what];
+
     NSDictionary * colors = @{
-                             @"umido": [UIColor greenColor],
-                             @"carta": [UIColor magentaColor],
-                             @"secco": [UIColor yellowColor],
-                             @"ingombranti": [UIColor lightGrayColor],
-                             @"plastica": [UIColor redColor],
-                             @"vetro - alluminio": [UIColor cyanColor],
-                             @"legno - ferro": [UIColor brownColor],
-                             @"olio domestico": [UIColor orangeColor],
+                             @"umido": [UIColor flatGreenColor],
+                             @"carta": [UIColor flatRedColor],
+                             @"secco": [UIColor flatYellowColor],
+                             @"ingombranti": [UIColor flatDarkWhiteColor],
+                             @"plastica": [UIColor flatOrangeColor],
+                             @"vetro - alluminio": [UIColor flatBlueColor],
+                             @"legno - ferro": [UIColor flatTealColor],
+                             @"olio domestico": [UIColor flatDarkTealColor],
                             };
-    cell.kindLabel.backgroundColor = colors[day.what];
+    //cell.kindLabel.backgroundColor = colors[day.what];
+    UIColor * color = colors[day.what];
+    [accessoryBadge setBackgroundColor:color];
+    if(color != nil) {
+        [cell setAccessoryView:accessoryBadge];
+    }
+
     return cell;
 }
 
