@@ -8,10 +8,11 @@ Cose da fare:
  x bug errore ultima cella: <1pom
  x icona [done:25 jun]
  x togliere la selezione delle celle [done: 25 jun]
- - all'avvio scrollare alla data corrente 
-    x imparato come si fa a scrollare all'avvio
-    - index row della data corrente
-    - binding
-    - imparare a come scrollare al rientro nell'app
+ x all'avvio scrollare alla data corrente [done: 27 jun]
+ x aggiungere launch image [done: 28 jun] <1pom
+ - fare gli screenshot per sottomissione
+ - descrizione per la review di Apple
+ - preparare l'icona per iTunes artwork
  - mettere i giorni della settimana
  - togliere che si possono selezionare
+ - badge carini
