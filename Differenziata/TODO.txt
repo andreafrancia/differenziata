@@ -12,6 +12,9 @@ Cose da fare:
  x aggiungere launch image [done: 28 jun] <1pom
  - fare gli screenshot per sottomissione
  - descrizione per la review di Apple
+    - description
+    - keyword
+    - support url
  - preparare l'icona per iTunes artwork
  - mettere i giorni della settimana
  - togliere che si possono selezionare
