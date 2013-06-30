@@ -19,3 +19,4 @@ Cose da fare:
  - mettere i giorni della settimana
  - togliere che si possono selezionare
  - badge carini
+ - backgorund image http://stackoverflow.com/a/5827775/36131
