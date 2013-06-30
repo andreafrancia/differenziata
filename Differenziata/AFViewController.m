@@ -8,7 +8,6 @@
 
 #import "AFViewController.h"
 #import "AFParser.h"
-#import "AFDayCell.h"
 #import "MLPAccessoryBadge.h"
 #import "UIColor+MLPFlatColors.h"
 
@@ -67,12 +66,12 @@ cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     AFDay * day = parser.result[indexPath.row];
 
-    UINib * nib = [UINib nibWithNibName:@"AFDayCell" bundle:nil];
-    [tableView registerNib:nib forCellReuseIdentifier:@"day"];
-    [tableView registerClass:[UITableViewCell class]
-      forCellReuseIdentifier:@"acc"];
-    
+
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"acc"];
+    if(cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                      reuseIdentifier:@"acc"];
+    }
     
     cell.textLabel.text = day.humanDate;
 
@@ -89,10 +88,12 @@ cellForRowAtIndexPath:(NSIndexPath *)indexPath
                              @"legno - ferro": [UIColor flatTealColor],
                              @"olio domestico": [UIColor flatDarkTealColor],
                             };
-    //cell.kindLabel.backgroundColor = colors[day.what];
+
     UIColor * color = colors[day.what];
     [accessoryBadge setBackgroundColor:color];
-    if(color != nil) {
+    if([day.what isEqualToString:@""]) {
+        [cell setAccessoryView:nil];
+    } else {
         [cell setAccessoryView:accessoryBadge];
     }
 

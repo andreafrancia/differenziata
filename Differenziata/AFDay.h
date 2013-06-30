@@ -12,4 +12,5 @@
 @property(strong, nonatomic) NSString * date;
 @property(strong, nonatomic) NSString * what;
 -(NSString*) humanDate;
+-(NSString*) weekDay;
 @end

@@ -97,6 +97,7 @@
     AFDay * day = parser.result[0];
 
     STAssertEqualObjects(@"8 giu 2010", day.humanDate, nil);
+    STAssertEqualObjects(@"mar", day.weekDay, nil);
 }
 
 
