@@ -6,14 +6,16 @@
 //  Copyright (c) 2013 Andrea Francia. All rights reserved.
 //
 
+#define USE_NAVIGATION false
+
 #import "AFAppDelegate.h"
 #import "AFViewController.h"
-#import "AFWasteDescriptionViewController.h"
-#import "AFParser.h"
+#import "AFDetailsViewController.h"
+#import "AFCalendar.h"
 
 @interface AFAppDelegate ()
 @property (strong, nonatomic) AFViewController *viewController;
-@property (strong, nonatomic) AFParser * parser;
+@property (strong, nonatomic) AFCalendar * parser;
 @end
 
 @implementation AFAppDelegate
@@ -23,11 +25,11 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
 
-    self.parser = [[AFParser alloc] init];
+    self.parser = [[AFCalendar alloc] init];
     [self.parser parseFile:[self pathTo:@"calendario.csv"]];
 
     self.viewController = [[AFViewController alloc] initWithCalendar:self.parser];
-    if (self.parser.useNavigation) {
+    if (USE_NAVIGATION) {
         UINavigationController * navigation = [[UINavigationController alloc]
                                                initWithRootViewController:self.viewController];
         self.window.rootViewController = navigation;

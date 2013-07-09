@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "AFDay.h"
 
-@class Waste;
+@class AFDetails;
 
-@interface AFParser: NSObject
+@interface AFCalendar: NSObject
 
 @property(readonly,nonatomic) NSArray* result;
 
@@ -21,6 +21,8 @@
 - (void) todayIs:(NSDate*)date;
 - (NSUInteger) todayIndex;
 
-- (BOOL) useNavigation;
-- (Waste*) detailsAt:(NSInteger) index;
+- (AFDetails*) detailsAt:(NSInteger) index;
+
+- (UIColor *) badgeColorAt:(NSInteger) index;
+
 @end

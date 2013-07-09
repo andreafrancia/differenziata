@@ -7,17 +7,17 @@
 //
 
 #import "DifferenziataTests.h"
-#import "AFParser.h"
+#import "AFCalendar.h"
 #import "NSDate+iso8601.h"
 #import <UIKit/UIKit.h>
 
 @implementation DifferenziataTests {
-    AFParser * parser;
+    AFCalendar * parser;
 }
 
 - (void)setUp
 {
-    parser = [AFParser new];
+    parser = [AFCalendar new];
 }
 
 - (void) test_how_to_get_today_date

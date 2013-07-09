@@ -6,20 +6,18 @@
 //  Copyright (c) 2013 Andrea Francia. All rights reserved.
 //
 
-#import "AFParser.h"
+#import "AFCalendar.h"
 #import "DDFileReader.h"
 #import "AFDay.h"
 #import "NSDate+iso8601.h"
-#import "Waste.h"
+#import "AFDetails.h"
 
-@implementation AFParser {
+#import <UIKit/UIKit.h>
+#import "UIColor+MLPFlatColors.h"
+
+@implementation AFCalendar {
     NSMutableArray* _result;
     NSDate * _today;
-}
-
-- (BOOL) useNavigation;
-{
-    return false;
 }
 
 - (void) todayIs:(NSDate*)date
@@ -73,9 +71,33 @@
     }
 }
 
-- (Waste*) detailsAt:(NSInteger) index;
+- (AFDetails*) detailsAt:(NSInteger) index;
 {
-    return [Waste new];
+    AFDetails * waste = [[AFDetails alloc] init];
+    AFDay * day = self.result[index];
+    waste.badgeColor = [self badgeColorAt:index];
+    waste.name = day.what;
+    waste.description = @"adjflkdaj";
+    return waste;
 }
+
+- (UIColor *) badgeColorAt:(NSInteger) index;
+{
+    AFDay * day1 = self.result[index];
+    NSDictionary * colors = @{
+                              @"umido": [UIColor flatGreenColor],
+                              @"carta": [UIColor flatRedColor],
+                              @"secco": [UIColor flatYellowColor],
+                              @"ingombranti": [UIColor flatDarkWhiteColor],
+                              @"plastica": [UIColor flatOrangeColor],
+                              @"vetro - alluminio": [UIColor flatBlueColor],
+                              @"legno - ferro": [UIColor flatTealColor],
+                              @"olio domestico": [UIColor flatDarkTealColor],
+                              };
+    UIColor * color = colors[day1.what];
+    return color;
+}
+
+
 
 @end

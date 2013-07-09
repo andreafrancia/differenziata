@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 Andrea Francia. All rights reserved.
 //
 
-#import "AFWasteDescriptionViewController.h"
-#import "Waste.h"
+#import "AFDetailsViewController.h"
+#import "AFDetails.h"
 
-@interface AFWasteDescriptionViewController ()
+@interface AFDetailsViewController ()
 @end
 
-@implementation AFWasteDescriptionViewController
+@implementation AFDetailsViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -49,6 +49,7 @@ static NSString *WasteDescriptionCellIdentifier = @"Desc";
         }
 
         cell.textLabel.text = self.waste.name;
+        //cell.backgroundColor = self.waste.badgeColor;
     } else {
 
         cell = [tableView dequeueReusableCellWithIdentifier:WasteDescriptionCellIdentifier];

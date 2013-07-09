@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-@class Waste;
+@class AFDetails;
 
-@interface AFWasteDescriptionViewController : UITableViewController
-@property Waste * waste;
+@interface AFDetailsViewController : UITableViewController
+@property AFDetails * waste;
 @end

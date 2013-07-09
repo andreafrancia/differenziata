@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Waste : NSObject
+@interface AFDetails : NSObject
 @property NSString* description;
 @property NSString* name;
+@property UIColor* badgeColor;
 @end

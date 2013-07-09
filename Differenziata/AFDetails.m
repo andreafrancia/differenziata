@@ -6,9 +6,10 @@
 //  Copyright (c) 2013 Andrea Francia. All rights reserved.
 //
 
-#import "Waste.h"
+#import "AFDetails.h"
+#import <UIKit/UIKit.h>
 
-@implementation Waste
+@implementation AFDetails
 
 -(id) init
 {

@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class AFParser;
+@class AFCalendar;
 
 @interface AFViewController : UIViewController<UITableViewDataSource,
                                                UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *table;
-- (id) initWithCalendar:(AFParser *) calendar;
+- (id) initWithCalendar:(AFCalendar *) calendar;
 - (void) applicationWillEnterForeground:(UIApplication *)application;
 @end

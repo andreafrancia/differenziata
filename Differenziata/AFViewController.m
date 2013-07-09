@@ -7,21 +7,22 @@
 //
 
 #import "AFViewController.h"
-#import "AFParser.h"
-#import "MLPAccessoryBadge.h"
+#import "AFCalendar.h"
 #import "UIColor+MLPFlatColors.h"
-#import "AFWasteDescriptionViewController.h"
-#import "Waste.h"
+#import "AFDetailsViewController.h"
+#import "AFDetails.h"
+
+#import "MLPAccessoryBadge.h"
 
 @interface AFViewController ()
 
 @end
 
 @implementation AFViewController {
-    AFParser * calendar;
+    AFCalendar * calendar;
 }
 
--(id) initWithCalendar:(AFParser *) aCalendar;
+-(id) initWithCalendar:(AFCalendar *) aCalendar;
 {
     self = [super initWithNibName:@"AFViewController" bundle:nil];
     if(self) {
@@ -60,7 +61,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    AFDay * day = calendar.result[indexPath.row];
+    NSInteger index = indexPath.row;
+    AFDay * day = calendar.result[index];
 
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"acc"];
     if(cell == nil) {
@@ -73,19 +75,7 @@
     MLPAccessoryBadge *accessoryBadge = [MLPAccessoryBadge new];
     [accessoryBadge setText:day.what];
 
-    NSDictionary * colors = @{
-                             @"umido": [UIColor flatGreenColor],
-                             @"carta": [UIColor flatRedColor],
-                             @"secco": [UIColor flatYellowColor],
-                             @"ingombranti": [UIColor flatDarkWhiteColor],
-                             @"plastica": [UIColor flatOrangeColor],
-                             @"vetro - alluminio": [UIColor flatBlueColor],
-                             @"legno - ferro": [UIColor flatTealColor],
-                             @"olio domestico": [UIColor flatDarkTealColor],
-                            };
-
-    UIColor * color = colors[day.what];
-    [accessoryBadge setBackgroundColor:color];
+    [accessoryBadge setBackgroundColor:[calendar badgeColorAt:index]];
     if([day.what isEqualToString:@""]) {
         [cell setAccessoryView:nil];
     } else {
@@ -98,8 +88,8 @@
 - (void) tableView:(UITableView *)tableView
  didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    AFWasteDescriptionViewController * detailsViewController;
-    detailsViewController = [[AFWasteDescriptionViewController alloc] init];
+    AFDetailsViewController * detailsViewController;
+    detailsViewController = [[AFDetailsViewController alloc] init];
 
     detailsViewController.waste = [calendar detailsAt:indexPath.row];
 

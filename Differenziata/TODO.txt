@@ -13,8 +13,9 @@ Done:
  x prima sottomissione [done: 1 jul] 2pom
 Backlog:
  - spiegazione dei contenti del tipo di rifiuto
-    x imparare a fare la navigazione [2pom, 9 luglio]
+    x predisporre per la navigazione [4pom, 9 luglio]
     - azzerare la selezione delle celle
+    - mettere il titolo
     - leggere le descrizioni da file?
     - scrivere le descrizioni
     - preparae la table per vedere le descrizioni
