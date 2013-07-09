@@ -8,6 +8,7 @@
 
 #import "AFDetailsViewController.h"
 #import "AFDetails.h"
+#import "UIColor+MLPFlatColors.h"
 
 @interface AFDetailsViewController ()
 @end
@@ -36,6 +37,17 @@ static NSString *WasteDescriptionCellIdentifier = @"Desc";
     return 2;
 }
 
+- (void)tableView:(UITableView *)tableView
+  willDisplayCell:(UITableViewCell *)cell
+forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 0) {
+        cell.textLabel.textColor = [UIColor flatWhiteColor];
+        cell.backgroundColor = self.waste.badgeColor;
+    }
+}
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell;
@@ -44,12 +56,11 @@ static NSString *WasteDescriptionCellIdentifier = @"Desc";
         cell = [tableView dequeueReusableCellWithIdentifier:WasteTypeCellIdentifier];
         if (cell == nil)
         {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                           reuseIdentifier:WasteTypeCellIdentifier];
         }
 
         cell.textLabel.text = self.waste.name;
-        //cell.backgroundColor = self.waste.badgeColor;
     } else {
 
         cell = [tableView dequeueReusableCellWithIdentifier:WasteDescriptionCellIdentifier];
@@ -94,12 +105,10 @@ static NSString *WasteDescriptionCellIdentifier = @"Desc";
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 0)
-    {
         return [super tableView:tableView heightForRowAtIndexPath:indexPath];
-    }
-    else {
+    if (indexPath.row == 1)
         return [self descriptionSize].height;
-    }
+    return 0;
 }
 
 @end

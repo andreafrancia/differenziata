@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Andrea Francia. All rights reserved.
 //
 
-#define USE_NAVIGATION false
+#define USE_NAVIGATION true
 
 #import "AFAppDelegate.h"
 #import "AFViewController.h"

@@ -10,6 +10,7 @@
 #import "AFCalendar.h"
 #import "NSDate+iso8601.h"
 #import <UIKit/UIKit.h>
+#import "AFDetails.h"
 
 @implementation DifferenziataTests {
     AFCalendar * parser;
@@ -19,6 +20,35 @@
 {
     parser = [AFCalendar new];
 }
+
+- (void) test_details
+{
+    [parser parseLine: @"2010-06-15,umido"];
+    
+    AFDetails * details = [parser detailsAt:0];
+    
+    STAssertEqualObjects(@"umido", details.name, nil);
+}
+
+- (void) test_no_details
+{
+    [parser parseLine: @"2010-06-15,"];
+    
+    BOOL result = [parser hasDetailsAt:0];
+    
+    STAssertEquals((BOOL)false, result , nil);
+}
+
+
+- (void) test_details_present
+{
+    [parser parseLine: @"2010-06-15,umido"];
+    
+    BOOL result = [parser hasDetailsAt:0];
+    
+    STAssertEquals((BOOL)true, result , nil);
+}
+
 
 - (void) test_how_to_get_today_date
 {

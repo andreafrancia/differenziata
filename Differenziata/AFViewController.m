@@ -31,8 +31,23 @@
     return self;
 }
 
+-(void)viewDidLoad;
+{
+    UIBarButtonItem *todayButton = [[UIBarButtonItem alloc]
+                                   initWithTitle:@"oggi"
+                                   style:UIBarButtonItemStyleBordered
+                                   target:self
+                                   action:@selector(scrollToTodayRow)];
+    self.navigationItem.leftBarButtonItem = todayButton;
+}
+
+
 - (void)viewDidAppear:(BOOL)animated {
-    [self scrollToTodayRow];
+    static BOOL first_time = YES;
+    if(first_time) {
+        [self scrollToTodayRow];
+    }
+    first_time = NO;
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -47,9 +62,9 @@
     
     NSIndexPath * indexPath = [NSIndexPath indexPathForRow:todayIndex
                                                  inSection:0];
-    [self.table scrollToRowAtIndexPath:indexPath
-                      atScrollPosition:UITableViewScrollPositionTop
-                              animated:YES];
+    [self.table selectRowAtIndexPath:indexPath animated:YES
+                      scrollPosition:UITableViewScrollPositionTop];
+    [self.table deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
@@ -76,6 +91,7 @@
     [accessoryBadge setText:day.what];
 
     [accessoryBadge setBackgroundColor:[calendar badgeColorAt:index]];
+
     if([day.what isEqualToString:@""]) {
         [cell setAccessoryView:nil];
     } else {
@@ -85,14 +101,16 @@
     return cell;
 }
 
-- (void) tableView:(UITableView *)tableView
- didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    AFDetailsViewController * detailsViewController;
-    detailsViewController = [[AFDetailsViewController alloc] init];
-
-    detailsViewController.waste = [calendar detailsAt:indexPath.row];
-
-    [self.navigationController pushViewController:detailsViewController animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSInteger index = indexPath.row;
+    if([calendar hasDetailsAt:index]) {
+        AFDetailsViewController * detailsViewController  = [[AFDetailsViewController alloc] init];
+        detailsViewController.waste = [calendar detailsAt:index];
+        
+        [self.navigationController pushViewController:detailsViewController animated:YES];
+    }
 }
+
 @end

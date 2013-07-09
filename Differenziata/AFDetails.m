@@ -11,13 +11,4 @@
 
 @implementation AFDetails
 
--(id) init
-{
-    if (self = [super init]) {
-        self.name = @"carta";
-        self.description = @"quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta";
-    }
-    return self;
-}
-
 @end

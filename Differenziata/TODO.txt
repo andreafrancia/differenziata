@@ -14,11 +14,10 @@ Done:
 Backlog:
  - spiegazione dei contenti del tipo di rifiuto
     x predisporre per la navigazione [4pom, 9 luglio]
-    - azzerare la selezione delle celle
-    - mettere il titolo
+    x azzerare la selezione delle celle
     - leggere le descrizioni da file?
     - scrivere le descrizioni
-    - preparae la table per vedere le descrizioni
+    x preparae la table per vedere le descrizioni
  - mettere i giorni della settimana
  - togliere che si possono selezionare
  - backgorund image http://stackoverflow.com/a/5827775/36131

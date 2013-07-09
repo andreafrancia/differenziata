@@ -73,17 +73,28 @@
 
 - (AFDetails*) detailsAt:(NSInteger) index;
 {
-    AFDetails * waste = [[AFDetails alloc] init];
+    AFDetails * details = [[AFDetails alloc] init];
     AFDay * day = self.result[index];
-    waste.badgeColor = [self badgeColorAt:index];
-    waste.name = day.what;
-    waste.description = @"adjflkdaj";
-    return waste;
+    details.badgeColor = [self badgeColorAt:index];
+    details.name = day.what;
+    details.description =@"quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta quello che si può buttare nella carta";
+    return details;
+}
+
+- (BOOL) hasDetailsAt:(NSInteger) index;
+{
+    return ![[self typeAt:index] isEqualToString:@""];
+}
+
+-(NSString*) typeAt:(NSInteger) index;
+{
+    AFDay * day = self.result[index];
+    return day.what;
 }
 
 - (UIColor *) badgeColorAt:(NSInteger) index;
 {
-    AFDay * day1 = self.result[index];
+    NSString * type = [self typeAt:index];
     NSDictionary * colors = @{
                               @"umido": [UIColor flatGreenColor],
                               @"carta": [UIColor flatRedColor],
@@ -94,7 +105,7 @@
                               @"legno - ferro": [UIColor flatTealColor],
                               @"olio domestico": [UIColor flatDarkTealColor],
                               };
-    UIColor * color = colors[day1.what];
+    UIColor * color = colors[type];
     return color;
 }
 

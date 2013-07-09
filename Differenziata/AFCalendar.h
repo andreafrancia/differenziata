@@ -22,7 +22,7 @@
 - (NSUInteger) todayIndex;
 
 - (AFDetails*) detailsAt:(NSInteger) index;
-
+- (BOOL) hasDetailsAt:(NSInteger) index;
 - (UIColor *) badgeColorAt:(NSInteger) index;
 
 @end
