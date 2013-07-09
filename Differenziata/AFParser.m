@@ -10,10 +10,16 @@
 #import "DDFileReader.h"
 #import "AFDay.h"
 #import "NSDate+iso8601.h"
+#import "Waste.h"
 
 @implementation AFParser {
     NSMutableArray* _result;
     NSDate * _today;
+}
+
+- (BOOL) useNavigation;
+{
+    return false;
 }
 
 - (void) todayIs:(NSDate*)date
@@ -65,6 +71,11 @@
     while ((line = [reader readLine])) {
         [self parseLine:line];
     }
+}
+
+- (Waste*) detailsAt:(NSInteger) index;
+{
+    return [Waste new];
 }
 
 @end

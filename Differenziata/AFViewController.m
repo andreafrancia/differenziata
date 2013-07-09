@@ -10,13 +10,24 @@
 #import "AFParser.h"
 #import "MLPAccessoryBadge.h"
 #import "UIColor+MLPFlatColors.h"
+#import "AFWasteDescriptionViewController.h"
+#import "Waste.h"
 
 @interface AFViewController ()
 
 @end
 
 @implementation AFViewController {
-    AFParser * parser;
+    AFParser * calendar;
+}
+
+-(id) initWithCalendar:(AFParser *) aCalendar;
+{
+    self = [super initWithNibName:@"AFViewController" bundle:nil];
+    if(self) {
+        calendar = aCalendar;
+    }
+    return self;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -30,8 +41,8 @@
 
 - (void)scrollToTodayRow
 {
-    [parser todayIs:[NSDate date]];
-    NSInteger todayIndex = [parser todayIndex];
+    [calendar todayIs:[NSDate date]];
+    NSInteger todayIndex = [calendar todayIndex];
     
     NSIndexPath * indexPath = [NSIndexPath indexPathForRow:todayIndex
                                                  inSection:0];
@@ -40,32 +51,16 @@
                               animated:YES];
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    parser = [AFParser new];
-    [parser parseFile:[[NSBundle mainBundle] pathForResource:@"calendario.csv"
-                                                     ofType:@""]];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    return [parser.result count];
+    return [calendar.result count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
-cellForRowAtIndexPath:(NSIndexPath *)indexPath
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    AFDay * day = parser.result[indexPath.row];
-
+    AFDay * day = calendar.result[indexPath.row];
 
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"acc"];
     if(cell == nil) {
@@ -100,11 +95,14 @@ cellForRowAtIndexPath:(NSIndexPath *)indexPath
     return cell;
 }
 
-#pragma mark Disable selection
-- (NSIndexPath *)tableView:(UITableView *)tableView
-  willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    return nil;
+- (void) tableView:(UITableView *)tableView
+ didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    AFWasteDescriptionViewController * detailsViewController;
+    detailsViewController = [[AFWasteDescriptionViewController alloc] init];
+
+    detailsViewController.waste = [calendar detailsAt:indexPath.row];
+
+    [self.navigationController pushViewController:detailsViewController animated:YES];
 }
-
-
 @end

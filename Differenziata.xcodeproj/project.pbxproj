@@ -15,6 +15,8 @@
 		6505EBDA177DB324002D7428 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6505EBD9177DB324002D7428 /* Default-568h@2x.png */; };
 		650DCACC177708020004C4DE /* AFParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 650DCACB177708020004C4DE /* AFParser.m */; };
 		650DCACF177742C00004C4DE /* AFDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 650DCACE177742C00004C4DE /* AFDay.m */; };
+		651A3D25178CA3C2006D4C5C /* AFWasteDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 651A3D24178CA3C2006D4C5C /* AFWasteDescriptionViewController.m */; };
+		651A3D28178CBFCF006D4C5C /* Waste.m in Sources */ = {isa = PBXBuildFile; fileRef = 651A3D27178CBFCF006D4C5C /* Waste.m */; };
 		65207E141778EBDE006255D4 /* recycle.png in Resources */ = {isa = PBXBuildFile; fileRef = 65207E131778EBDE006255D4 /* recycle.png */; };
 		65207E16177972A0006255D4 /* recycle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65207E15177972A0006255D4 /* recycle@2x.png */; };
 		654A3976177645A700D0F06D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654A3975177645A700D0F06D /* UIKit.framework */; };
@@ -59,6 +61,10 @@
 		650DCACB177708020004C4DE /* AFParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFParser.m; sourceTree = "<group>"; };
 		650DCACD177742C00004C4DE /* AFDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFDay.h; sourceTree = "<group>"; };
 		650DCACE177742C00004C4DE /* AFDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFDay.m; sourceTree = "<group>"; };
+		651A3D23178CA3C2006D4C5C /* AFWasteDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFWasteDescriptionViewController.h; sourceTree = "<group>"; };
+		651A3D24178CA3C2006D4C5C /* AFWasteDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFWasteDescriptionViewController.m; sourceTree = "<group>"; };
+		651A3D26178CBFCF006D4C5C /* Waste.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Waste.h; sourceTree = "<group>"; };
+		651A3D27178CBFCF006D4C5C /* Waste.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Waste.m; sourceTree = "<group>"; };
 		65207E131778EBDE006255D4 /* recycle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recycle.png; sourceTree = "<group>"; };
 		65207E15177972A0006255D4 /* recycle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recycle@2x.png"; sourceTree = "<group>"; };
 		654A3972177645A700D0F06D /* Differenziata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Differenziata.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -225,6 +231,8 @@
 				650DCACE177742C00004C4DE /* AFDay.m */,
 				6505EBAC177C5F3A002D7428 /* NSDate+iso8601.h */,
 				6505EBAD177C5F3A002D7428 /* NSDate+iso8601.m */,
+				651A3D26178CBFCF006D4C5C /* Waste.h */,
+				651A3D27178CBFCF006D4C5C /* Waste.m */,
 			);
 			name = logic;
 			sourceTree = "<group>";
@@ -244,6 +252,8 @@
 				654A398D177645A800D0F06D /* AFViewController.h */,
 				654A398E177645A800D0F06D /* AFViewController.m */,
 				654A3990177645A800D0F06D /* AFViewController.xib */,
+				651A3D23178CA3C2006D4C5C /* AFWasteDescriptionViewController.h */,
+				651A3D24178CA3C2006D4C5C /* AFWasteDescriptionViewController.m */,
 			);
 			name = ui;
 			sourceTree = "<group>";
@@ -403,6 +413,8 @@
 				650DCACC177708020004C4DE /* AFParser.m in Sources */,
 				650DCACF177742C00004C4DE /* AFDay.m in Sources */,
 				6505EBAE177C5F3A002D7428 /* NSDate+iso8601.m in Sources */,
+				651A3D25178CA3C2006D4C5C /* AFWasteDescriptionViewController.m in Sources */,
+				651A3D28178CBFCF006D4C5C /* Waste.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
