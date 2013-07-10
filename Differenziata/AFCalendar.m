@@ -24,8 +24,6 @@ static NSString * kIngombranti = @"ingombranti";
 static NSString * kLegnoFerro = @"legno - ferro";
 static NSString * kOlioDomestico = @"olio domestico";
 
-static NSString * kDescription = @"description";
-
 @implementation AFCalendar {
     NSMutableArray* _result;
     NSDate * _today;
