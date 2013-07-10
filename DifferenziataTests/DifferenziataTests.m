@@ -28,6 +28,7 @@
     AFDetails * details = [parser detailsAt:0];
     
     STAssertEqualObjects(@"umido", details.name, nil);
+    STAssertEqualObjects(@"I rifiuti", [details.description substringToIndex:9], nil);
 }
 
 - (void) test_no_details
