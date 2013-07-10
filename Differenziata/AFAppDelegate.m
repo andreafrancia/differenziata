@@ -6,8 +6,6 @@
 //  Copyright (c) 2013 Andrea Francia. All rights reserved.
 //
 
-#define USE_NAVIGATION true
-
 #import "AFAppDelegate.h"
 #import "AFViewController.h"
 #import "AFDetailsViewController.h"
@@ -29,13 +27,9 @@
     [self.parser parseFile:[self pathTo:@"calendario.csv"]];
 
     self.viewController = [[AFViewController alloc] initWithCalendar:self.parser];
-    if (USE_NAVIGATION) {
-        UINavigationController * navigation = [[UINavigationController alloc]
-                                               initWithRootViewController:self.viewController];
-        self.window.rootViewController = navigation;
-    } else {
-        self.window.rootViewController = self.viewController;
-    }
+    UINavigationController * navigation = [[UINavigationController alloc]
+                                           initWithRootViewController:self.viewController];
+    self.window.rootViewController = navigation;
 
     [self.window makeKeyAndVisible];
     return YES;

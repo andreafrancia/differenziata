@@ -15,8 +15,12 @@
 
 @property(readonly,nonatomic) NSArray* result;
 
--(void) parseLine:(NSString*)line;
--(void) parseFile:(NSString*) path;
+- (NSInteger) count;
+- (void) parseLine:(NSString*)line;
+- (void) parseFile:(NSString*) path;
+
+- (NSString*) humanDateAt:(NSInteger) index;
+- (NSString*) wasteTypeAt:(NSInteger) index;
 
 - (void) todayIs:(NSDate*)date;
 - (NSUInteger) todayIndex;
@@ -24,5 +28,6 @@
 - (AFDetails*) detailsAt:(NSInteger) index;
 - (BOOL) hasDetailsAt:(NSInteger) index;
 - (UIColor *) badgeColorAt:(NSInteger) index;
+- (BOOL) isSomethingBeingCollectedAt:(NSInteger) index;
 
 @end

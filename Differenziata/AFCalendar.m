@@ -30,6 +30,11 @@ static NSString * kOlioDomestico = @"olio domestico";
     NSDictionary * _wasteTypes;
 }
 
+- (NSInteger) count;
+{
+    return [self.result count];
+}
+
 - (void) todayIs:(NSDate*)date
 {
     _today = date;
@@ -63,6 +68,19 @@ static NSString * kOlioDomestico = @"olio domestico";
     }
     return self;
 }
+
+- (NSString*) humanDateAt:(NSInteger) index;
+{
+    AFDay * day = _result[index];
+    return day.humanDate;
+}
+
+- (NSString*) wasteTypeAt:(NSInteger) index;
+{
+    AFDay * day = _result[index];
+    return day.what;
+}
+
 
 -(NSInteger) indexOf:(NSDate*) date
 {
@@ -113,6 +131,12 @@ static NSString * kOlioDomestico = @"olio domestico";
 {
     AFDay * day = self.result[index];
     return day.what;
+}
+
+-(BOOL) isSomethingBeingCollectedAt:(NSInteger) index;
+{
+    NSString * wasteType = [self wasteTypeAt:index];
+    return ! [wasteType isEqualToString:@""];
 }
 
 - (UIColor *) badgeColorAt:(NSInteger) index;

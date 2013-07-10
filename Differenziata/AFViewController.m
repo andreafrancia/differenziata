@@ -7,16 +7,12 @@
 //
 
 #import "AFViewController.h"
-#import "AFCalendar.h"
-#import "UIColor+MLPFlatColors.h"
 #import "AFDetailsViewController.h"
+
+#import "AFCalendar.h"
 #import "AFDetails.h"
 
 #import "MLPAccessoryBadge.h"
-
-@interface AFViewController ()
-
-@end
 
 @implementation AFViewController {
     AFCalendar * calendar;
@@ -70,36 +66,43 @@
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    return [calendar.result count];
+    return [calendar count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    UITableViewCell * cell = [self makeCell:tableView];
     NSInteger index = indexPath.row;
-    AFDay * day = calendar.result[index];
 
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"acc"];
-    if(cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                      reuseIdentifier:@"acc"];
-    }
-    
-    cell.textLabel.text = day.humanDate;
-
-    MLPAccessoryBadge *accessoryBadge = [MLPAccessoryBadge new];
-    [accessoryBadge setText:day.what];
-
-    [accessoryBadge setBackgroundColor:[calendar badgeColorAt:index]];
-
-    if([day.what isEqualToString:@""]) {
-        [cell setAccessoryView:nil];
-    } else {
-        [cell setAccessoryView:accessoryBadge];
-    }
+    cell.textLabel.text = [calendar humanDateAt:index];
+    cell.accessoryView = [self badgeFor:index];
 
     return cell;
 }
+
+-(UITableViewCell*)makeCell:(UITableView *)tableView
+{
+    static NSString * identifier = @"cell-id";
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if(cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                      reuseIdentifier:identifier];
+    }
+    return cell;
+}
+
+-(UIView *)badgeFor:(NSInteger) index
+{
+    if([calendar isSomethingBeingCollectedAt:index]) {
+        MLPAccessoryBadge *accessoryBadge = [MLPAccessoryBadge new];
+        [accessoryBadge setText:[calendar wasteTypeAt:index]];
+        [accessoryBadge setBackgroundColor:[calendar badgeColorAt:index]];
+        return accessoryBadge;
+    }
+    return nil;
+}
+
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
