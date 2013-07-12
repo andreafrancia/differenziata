@@ -6,26 +6,31 @@
 //  Copyright (c) 2013 Andrea Francia. All rights reserved.
 //
 
-#import "DifferenziataTests.h"
 #import "AFCalendar.h"
 #import "NSDate+iso8601.h"
 #import <UIKit/UIKit.h>
 #import "AFDetails.h"
 
+#import <SenTestingKit/SenTestingKit.h>
+
+
+
+@interface DifferenziataTests : SenTestCase
+@end
 @implementation DifferenziataTests {
-    AFCalendar * parser;
+    AFCalendar * calendar;
 }
 
 - (void)setUp
 {
-    parser = [AFCalendar new];
+    calendar = [AFCalendar new];
 }
 
 - (void) test_details
 {
-    [parser parseLine: @"2010-06-15,umido"];
+    [calendar parseLine: @"2010-06-15,umido"];
     
-    AFDetails * details = [parser detailsAt:0];
+    AFDetails * details = [calendar detailsAt:0];
     
     STAssertEqualObjects(@"umido", details.name, nil);
     STAssertEqualObjects(@"I rifiuti", [details.description substringToIndex:9], nil);
@@ -33,21 +38,21 @@
 
 - (void) test_no_details
 {
-    [parser parseLine: @"2010-06-15,"];
+    [calendar parseLine: @"2010-06-15,"];
     
-    BOOL result = [parser hasDetailsAt:0];
+    BOOL result = [calendar hasDetailsAt:0];
     
-    STAssertEquals((BOOL)false, result , nil);
+    STAssertEquals(NO, result , nil);
 }
 
 
 - (void) test_details_present
 {
-    [parser parseLine: @"2010-06-15,umido"];
+    [calendar parseLine: @"2010-06-15,umido"];
     
-    BOOL result = [parser hasDetailsAt:0];
+    BOOL result = [calendar hasDetailsAt:0];
     
-    STAssertEquals((BOOL)true, result , nil);
+    STAssertEquals(YES, result , nil);
 }
 
 
@@ -60,21 +65,21 @@
 
 - (void) test
 {
-    [parser todayIs:[NSDate fromIso8601:@"2010-06-15"]];
-    [parser parseLine: @"2010-06-13,umido"];
-    [parser parseLine: @"2010-06-15,sporco"];
-    [parser parseLine: @"2010-06-18,sporco"];
+    [calendar todayIs:[NSDate fromIso8601:@"2010-06-15"]];
+    [calendar parseLine: @"2010-06-13,umido"];
+    [calendar parseLine: @"2010-06-15,sporco"];
+    [calendar parseLine: @"2010-06-18,sporco"];
 
-    NSInteger row = [parser todayIndex];
+    NSInteger row = [calendar todayIndex];
 
     STAssertEquals(1, row, nil);
 }
 
 - (void) test_should_accept_comma_as_separator
 {
-    [parser parseLine: @"2010-06-15,sporco"];
+    [calendar parseLine: @"2010-06-15,sporco"];
 
-    AFDay * parsed = parser.result[0];
+    AFDay * parsed = calendar.result[0];
 
     STAssertEqualObjects(@"2010-06-15", parsed.date, nil);
     STAssertEqualObjects(@"sporco",      parsed.what, nil);
@@ -82,10 +87,10 @@
 
 - (void) test_should_read_from_a_csv_file
 {
-    [parser parseFile: [self pathFor:@"calendario.csv"]];
+    [calendar parseFile: [self pathFor:@"calendario.csv"]];
 
-    NSInteger dec31index = [parser.result count] - 1;
-    AFDay * dec31 = parser.result[dec31index];
+    NSInteger dec31index = [calendar.result count] - 1;
+    AFDay * dec31 = calendar.result[dec31index];
 
     STAssertEqualObjects(@"2013-12-31" , dec31.date, nil);
     STAssertEqualObjects(@"carta",       dec31.what, nil);
@@ -97,23 +102,13 @@
                                            ofType:@""];
 }
 
-- (void) test_should_parse_single_item
-{
-    [parser parseLine: @"2013-06-15\tumido"];
-
-    AFDay * parsed = parser.result[0];
-
-    STAssertEqualObjects(@"2013-06-15", parsed.date, nil);
-    STAssertEqualObjects(@"umido",      parsed.what, nil);
-}
-
 - (void) test_should_parse_multiple_lines
 {
-    [parser parseLine: @"2013-07-15\tumido"];
-    [parser parseLine: @"2013-07-16\tsecco"];
+    [calendar parseLine: @"2013-07-15\tumido"];
+    [calendar parseLine: @"2013-07-16\tsecco"];
 
-    AFDay * first = parser.result[0];
-    AFDay * second = parser.result[1];
+    AFDay * first = calendar.result[0];
+    AFDay * second = calendar.result[1];
 
     STAssertEqualObjects(@"2013-07-15", first.date, nil);
     STAssertEqualObjects(@"umido", first.what, nil);
@@ -123,12 +118,9 @@
 
 - (void) test_should_render_human_readable_date
 {
-    [parser parseLine:@"2010-06-08\tumido"];
+    [calendar parseLine:@"2010-06-08\tumido"];
 
-    AFDay * day = parser.result[0];
-
-    STAssertEqualObjects(@"8 giu 2010", day.humanDate, nil);
-    STAssertEqualObjects(@"mar", day.weekDay, nil);
+    STAssertEqualObjects(@"8 giu 2010", [calendar humanDateAt:0], nil);
 }
 
 

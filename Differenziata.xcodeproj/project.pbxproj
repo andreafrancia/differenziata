@@ -87,7 +87,6 @@
 		654A3999177645A800D0F06D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		654A39A1177645A800D0F06D /* DifferenziataTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DifferenziataTests-Info.plist"; sourceTree = "<group>"; };
 		654A39A3177645A800D0F06D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		654A39A5177645A800D0F06D /* DifferenziataTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DifferenziataTests.h; sourceTree = "<group>"; };
 		654A39A6177645A800D0F06D /* DifferenziataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DifferenziataTests.m; sourceTree = "<group>"; };
 		654A39B1177645F400D0F06D /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TODO.txt; path = Differenziata/TODO.txt; sourceTree = "<group>"; };
 		65CB4CD117764B48003C8D42 /* DDFileReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDFileReader.h; sourceTree = "<group>"; };
@@ -187,7 +186,6 @@
 		654A399F177645A800D0F06D /* DifferenziataTests */ = {
 			isa = PBXGroup;
 			children = (
-				654A39A5177645A800D0F06D /* DifferenziataTests.h */,
 				654A39A6177645A800D0F06D /* DifferenziataTests.m */,
 				654A39A0177645A800D0F06D /* Supporting Files */,
 			);
