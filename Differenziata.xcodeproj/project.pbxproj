@@ -8,6 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		620924253EA84CBB96D7F77A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C892C48969244AA4B0F4CDA0 /* libPods.a */; };
+		65044A421790017F00421E92 /* AFRecyclingHintsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65044A411790017F00421E92 /* AFRecyclingHintsViewController.m */; };
+		65044A5417900C0000421E92 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654A3975177645A700D0F06D /* UIKit.framework */; };
+		65044A5517900C0000421E92 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654A3977177645A700D0F06D /* Foundation.framework */; };
+		65044A5617900C0000421E92 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654A3979177645A700D0F06D /* CoreGraphics.framework */; };
+		65044A5717900C0000421E92 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C892C48969244AA4B0F4CDA0 /* libPods.a */; };
+		65044A5917900C0000421E92 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 654A397E177645A700D0F06D /* InfoPlist.strings */; };
+		65044A5A17900C0000421E92 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 654A3987177645A700D0F06D /* Default.png */; };
+		65044A5B17900C0000421E92 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 654A3989177645A800D0F06D /* Default@2x.png */; };
+		65044A5C17900C0000421E92 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 654A398B177645A800D0F06D /* Default-568h@2x.png */; };
+		65044A5D17900C0000421E92 /* AFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 654A3990177645A800D0F06D /* AFViewController.xib */; };
+		65044A5E17900C0000421E92 /* TODO.txt in Resources */ = {isa = PBXBuildFile; fileRef = 654A39B1177645F400D0F06D /* TODO.txt */; };
+		65044A5F17900C0000421E92 /* recycle.png in Resources */ = {isa = PBXBuildFile; fileRef = 65207E131778EBDE006255D4 /* recycle.png */; };
+		65044A6017900C0000421E92 /* recycle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65207E15177972A0006255D4 /* recycle@2x.png */; };
+		65044A6117900C0000421E92 /* calendario.csv in Resources */ = {isa = PBXBuildFile; fileRef = 6505EBAA177B4416002D7428 /* calendario.csv */; };
+		65044A6217900C0000421E92 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6505EBD5177DB315002D7428 /* Default.png */; };
+		65044A6317900C0000421E92 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6505EBD7177DB31B002D7428 /* Default@2x.png */; };
+		65044A6417900C0000421E92 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6505EBD9177DB324002D7428 /* Default-568h@2x.png */; };
+		65044A6B17900C5800421E92 /* AFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65044A1E178FEFE700421E92 /* AFAppDelegate.m */; };
+		65044A6C17900C5A00421E92 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65044A1A178FEFE700421E92 /* main.m */; };
+		65044A6D17900C5D00421E92 /* AFRecyclingHintsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65044A411790017F00421E92 /* AFRecyclingHintsViewController.m */; };
+		65044A711790140700421E92 /* AFCalendarPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65044A701790140600421E92 /* AFCalendarPresenter.m */; };
+		65044A751790145100421E92 /* AFWasteTypePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65044A741790145100421E92 /* AFWasteTypePresenter.m */; };
 		6505EBAB177B4416002D7428 /* calendario.csv in Resources */ = {isa = PBXBuildFile; fileRef = 6505EBAA177B4416002D7428 /* calendario.csv */; };
 		6505EBAE177C5F3A002D7428 /* NSDate+iso8601.m in Sources */ = {isa = PBXBuildFile; fileRef = 6505EBAD177C5F3A002D7428 /* NSDate+iso8601.m */; };
 		6505EBD6177DB316002D7428 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6505EBD5177DB315002D7428 /* Default.png */; };
@@ -51,6 +73,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		65044A16178FEFE700421E92 /* ProvaSearch-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ProvaSearch-Info.plist"; sourceTree = "<group>"; };
+		65044A18178FEFE700421E92 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		65044A1A178FEFE700421E92 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		65044A1C178FEFE700421E92 /* ProvaSearch-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ProvaSearch-Prefix.pch"; sourceTree = "<group>"; };
+		65044A1D178FEFE700421E92 /* AFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFAppDelegate.h; sourceTree = "<group>"; };
+		65044A1E178FEFE700421E92 /* AFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFAppDelegate.m; sourceTree = "<group>"; };
+		65044A20178FEFE700421E92 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		65044A22178FEFE700421E92 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		65044A24178FEFE700421E92 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		65044A401790017F00421E92 /* AFRecyclingHintsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFRecyclingHintsViewController.h; sourceTree = "<group>"; };
+		65044A411790017F00421E92 /* AFRecyclingHintsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFRecyclingHintsViewController.m; sourceTree = "<group>"; };
+		65044A6917900C0000421E92 /* Differenziata copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Differenziata copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65044A6A17900C0000421E92 /* Differenziata copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Differenziata copy-Info.plist"; path = "/Users/andrea/Differenziata/Differenziata copy-Info.plist"; sourceTree = "<absolute>"; };
+		65044A6F1790140600421E92 /* AFCalendarPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFCalendarPresenter.h; sourceTree = "<group>"; };
+		65044A701790140600421E92 /* AFCalendarPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFCalendarPresenter.m; sourceTree = "<group>"; };
+		65044A731790145100421E92 /* AFWasteTypePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFWasteTypePresenter.h; sourceTree = "<group>"; };
+		65044A741790145100421E92 /* AFWasteTypePresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFWasteTypePresenter.m; sourceTree = "<group>"; };
 		6505EBAA177B4416002D7428 /* calendario.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = calendario.csv; sourceTree = "<group>"; };
 		6505EBAC177C5F3A002D7428 /* NSDate+iso8601.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+iso8601.h"; sourceTree = "<group>"; };
 		6505EBAD177C5F3A002D7428 /* NSDate+iso8601.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+iso8601.m"; sourceTree = "<group>"; };
@@ -96,6 +135,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		65044A5317900C0000421E92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65044A5417900C0000421E92 /* UIKit.framework in Frameworks */,
+				65044A5517900C0000421E92 /* Foundation.framework in Frameworks */,
+				65044A5617900C0000421E92 /* CoreGraphics.framework in Frameworks */,
+				65044A5717900C0000421E92 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		654A396F177645A700D0F06D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -120,6 +170,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		65044A14178FEFE700421E92 /* ProvaSearch */ = {
+			isa = PBXGroup;
+			children = (
+				65044A1D178FEFE700421E92 /* AFAppDelegate.h */,
+				65044A1E178FEFE700421E92 /* AFAppDelegate.m */,
+				65044A15178FEFE700421E92 /* Supporting Files */,
+				65044A401790017F00421E92 /* AFRecyclingHintsViewController.h */,
+				65044A411790017F00421E92 /* AFRecyclingHintsViewController.m */,
+			);
+			path = ProvaSearch;
+			sourceTree = "<group>";
+		};
+		65044A15178FEFE700421E92 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				65044A16178FEFE700421E92 /* ProvaSearch-Info.plist */,
+				65044A17178FEFE700421E92 /* InfoPlist.strings */,
+				65044A1A178FEFE700421E92 /* main.m */,
+				65044A1C178FEFE700421E92 /* ProvaSearch-Prefix.pch */,
+				65044A20178FEFE700421E92 /* Default.png */,
+				65044A22178FEFE700421E92 /* Default@2x.png */,
+				65044A24178FEFE700421E92 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		65044A721790140D00421E92 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				65044A6F1790140600421E92 /* AFCalendarPresenter.h */,
+				65044A701790140600421E92 /* AFCalendarPresenter.m */,
+				65044A731790145100421E92 /* AFWasteTypePresenter.h */,
+				65044A741790145100421E92 /* AFWasteTypePresenter.m */,
+			);
+			name = presenter;
+			sourceTree = "<group>";
+		};
 		654A3969177645A700D0F06D = {
 			isa = PBXGroup;
 			children = (
@@ -128,9 +215,11 @@
 				6558B30D1780C54800A25033 /* icons */,
 				654A397B177645A700D0F06D /* Differenziata */,
 				654A399F177645A800D0F06D /* DifferenziataTests */,
+				65044A14178FEFE700421E92 /* ProvaSearch */,
 				654A3974177645A700D0F06D /* Frameworks */,
 				654A3973177645A700D0F06D /* Products */,
 				8B542C4968A54FDCB492DFA2 /* Pods.xcconfig */,
+				65044A6A17900C0000421E92 /* Differenziata copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,6 +228,7 @@
 			children = (
 				654A3972177645A700D0F06D /* Differenziata.app */,
 				654A3998177645A800D0F06D /* DifferenziataTests.octest */,
+				65044A6917900C0000421E92 /* Differenziata copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,10 +250,11 @@
 			children = (
 				654A3984177645A700D0F06D /* AFAppDelegate.h */,
 				654A3985177645A700D0F06D /* AFAppDelegate.m */,
-				65DAD5D017778CDD0011D95E /* ui */,
+				65044A721790140D00421E92 /* presenter */,
+				65DAD5D017778CDD0011D95E /* controller */,
 				654A397C177645A700D0F06D /* Supporting Files */,
 				65DAD5CF17778CBC0011D95E /* lib */,
-				65DAD5CE17778CAF0011D95E /* logic */,
+				65DAD5CE17778CAF0011D95E /* model */,
 			);
 			path = Differenziata;
 			sourceTree = "<group>";
@@ -220,7 +311,7 @@
 			name = icons;
 			sourceTree = "<group>";
 		};
-		65DAD5CE17778CAF0011D95E /* logic */ = {
+		65DAD5CE17778CAF0011D95E /* model */ = {
 			isa = PBXGroup;
 			children = (
 				650DCACA177708020004C4DE /* AFCalendar.h */,
@@ -232,7 +323,7 @@
 				651A3D26178CBFCF006D4C5C /* AFDetails.h */,
 				651A3D27178CBFCF006D4C5C /* AFDetails.m */,
 			);
-			name = logic;
+			name = model;
 			sourceTree = "<group>";
 		};
 		65DAD5CF17778CBC0011D95E /* lib */ = {
@@ -244,7 +335,7 @@
 			name = lib;
 			sourceTree = "<group>";
 		};
-		65DAD5D017778CDD0011D95E /* ui */ = {
+		65DAD5D017778CDD0011D95E /* controller */ = {
 			isa = PBXGroup;
 			children = (
 				654A398D177645A800D0F06D /* AFViewController.h */,
@@ -253,12 +344,31 @@
 				651A3D23178CA3C2006D4C5C /* AFDetailsViewController.h */,
 				651A3D24178CA3C2006D4C5C /* AFDetailsViewController.m */,
 			);
-			name = ui;
+			name = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		65044A4617900C0000421E92 /* Prove */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65044A6617900C0000421E92 /* Build configuration list for PBXNativeTarget "Prove" */;
+			buildPhases = (
+				65044A4717900C0000421E92 /* Check Pods Manifest.lock */,
+				65044A4817900C0000421E92 /* Sources */,
+				65044A5317900C0000421E92 /* Frameworks */,
+				65044A5817900C0000421E92 /* Resources */,
+				65044A6517900C0000421E92 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Prove;
+			productName = Differenziata;
+			productReference = 65044A6917900C0000421E92 /* Differenziata copy.app */;
+			productType = "com.apple.product-type.application";
+		};
 		654A3971177645A700D0F06D /* Differenziata */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 654A39AA177645A800D0F06D /* Build configuration list for PBXNativeTarget "Differenziata" */;
@@ -321,11 +431,31 @@
 			targets = (
 				654A3971177645A700D0F06D /* Differenziata */,
 				654A3997177645A800D0F06D /* DifferenziataTests */,
+				65044A4617900C0000421E92 /* Prove */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		65044A5817900C0000421E92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65044A5917900C0000421E92 /* InfoPlist.strings in Resources */,
+				65044A5A17900C0000421E92 /* Default.png in Resources */,
+				65044A5B17900C0000421E92 /* Default@2x.png in Resources */,
+				65044A5C17900C0000421E92 /* Default-568h@2x.png in Resources */,
+				65044A5D17900C0000421E92 /* AFViewController.xib in Resources */,
+				65044A5E17900C0000421E92 /* TODO.txt in Resources */,
+				65044A5F17900C0000421E92 /* recycle.png in Resources */,
+				65044A6017900C0000421E92 /* recycle@2x.png in Resources */,
+				65044A6117900C0000421E92 /* calendario.csv in Resources */,
+				65044A6217900C0000421E92 /* Default.png in Resources */,
+				65044A6317900C0000421E92 /* Default@2x.png in Resources */,
+				65044A6417900C0000421E92 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		654A3970177645A700D0F06D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -384,6 +514,34 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 		};
+		65044A4717900C0000421E92 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+		65044A6517900C0000421E92 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
 		654A3996177645A800D0F06D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -400,6 +558,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		65044A4817900C0000421E92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65044A6B17900C5800421E92 /* AFAppDelegate.m in Sources */,
+				65044A6C17900C5A00421E92 /* main.m in Sources */,
+				65044A6D17900C5D00421E92 /* AFRecyclingHintsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		654A396E177645A700D0F06D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -413,6 +581,9 @@
 				6505EBAE177C5F3A002D7428 /* NSDate+iso8601.m in Sources */,
 				651A3D25178CA3C2006D4C5C /* AFDetailsViewController.m in Sources */,
 				651A3D28178CBFCF006D4C5C /* AFDetails.m in Sources */,
+				65044A421790017F00421E92 /* AFRecyclingHintsViewController.m in Sources */,
+				65044A711790140700421E92 /* AFCalendarPresenter.m in Sources */,
+				65044A751790145100421E92 /* AFWasteTypePresenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +607,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		65044A17178FEFE700421E92 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65044A18178FEFE700421E92 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		654A397E177645A700D0F06D /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -463,6 +642,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		65044A6717900C0000421E92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B542C4968A54FDCB492DFA2 /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Differenziata/Differenziata-Prefix.pch";
+				INFOPLIST_FILE = "Differenziata copy-Info.plist";
+				PRODUCT_NAME = "Differenziata copy";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		65044A6817900C0000421E92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B542C4968A54FDCB492DFA2 /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Differenziata/Differenziata-Prefix.pch";
+				INFOPLIST_FILE = "Differenziata copy-Info.plist";
+				PRODUCT_NAME = "Differenziata copy";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		654A39A8177645A800D0F06D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -580,6 +783,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		65044A6617900C0000421E92 /* Build configuration list for PBXNativeTarget "Prove" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65044A6717900C0000421E92 /* Debug */,
+				65044A6817900C0000421E92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		654A396D177645A700D0F06D /* Build configuration list for PBXProject "Differenziata" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

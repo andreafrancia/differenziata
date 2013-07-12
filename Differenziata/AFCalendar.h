@@ -9,6 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "AFDay.h"
 
+extern NSString * kUmido;
+extern NSString * kSecco;
+extern NSString * kPlastica;
+extern NSString * kCarta;
+extern NSString * kVetroAlluminio;
+extern NSString * kIngombranti;
+extern NSString * kLegnoFerro;
+extern NSString * kOlioDomestico;
+
 @class AFDetails;
 
 @interface AFCalendar: NSObject
@@ -27,7 +36,10 @@
 
 - (AFDetails*) detailsAt:(NSInteger) index;
 - (BOOL) hasDetailsAt:(NSInteger) index;
+
+// badges
 - (UIColor *) badgeColorAt:(NSInteger) index;
+- (UIColor *) badgeColorForWasteType:(NSString*) wasteType;
 - (BOOL) isSomethingBeingCollectedAt:(NSInteger) index;
 
 @end

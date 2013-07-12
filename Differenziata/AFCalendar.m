@@ -15,14 +15,14 @@
 #import <UIKit/UIKit.h>
 #import "UIColor+MLPFlatColors.h"
 
-static NSString * kUmido = @"umido";
-static NSString * kSecco = @"secco";
-static NSString * kPlastica = @"plastica";
-static NSString * kCarta = @"carta";
-static NSString * kVetroAlluminio = @"vetro - alluminio";
-static NSString * kIngombranti = @"ingombranti";
-static NSString * kLegnoFerro = @"legno - ferro";
-static NSString * kOlioDomestico = @"olio domestico";
+NSString * kUmido = @"umido";
+NSString * kSecco = @"secco";
+NSString * kPlastica = @"plastica";
+NSString * kCarta = @"carta";
+NSString * kVetroAlluminio = @"vetro - alluminio";
+NSString * kIngombranti = @"ingombranti";
+NSString * kLegnoFerro = @"legno - ferro";
+NSString * kOlioDomestico = @"olio domestico";
 
 @implementation AFCalendar {
     NSMutableArray* _result;
@@ -142,20 +142,21 @@ static NSString * kOlioDomestico = @"olio domestico";
 - (UIColor *) badgeColorAt:(NSInteger) index;
 {
     NSString * type = [self typeAt:index];
-    NSDictionary * colors = @{
-                              kUmido: [UIColor flatGreenColor],
-                              kSecco: [UIColor flatYellowColor],
-                              kPlastica: [UIColor flatOrangeColor],
-                              kCarta: [UIColor flatRedColor],
-                              kVetroAlluminio: [UIColor flatBlueColor],
-                              kIngombranti: [UIColor flatDarkWhiteColor],
-                              kLegnoFerro: [UIColor flatDarkOrangeColor],
-                              kOlioDomestico: [UIColor flatDarkTealColor],
-                              };
-    UIColor * color = colors[type];
-    return color;
+    return [self badgeColorForWasteType:type];
 }
 
-
+- (UIColor *) badgeColorForWasteType:(NSString*) wasteType;
+{
+    return @{
+            kUmido: [UIColor flatGreenColor],
+            kSecco: [UIColor flatYellowColor],
+            kPlastica: [UIColor flatOrangeColor],
+            kCarta: [UIColor flatRedColor],
+            kVetroAlluminio: [UIColor flatBlueColor],
+            kIngombranti: [UIColor flatDarkWhiteColor],
+            kLegnoFerro: [UIColor flatDarkOrangeColor],
+            kOlioDomestico: [UIColor flatDarkTealColor],
+    }[wasteType];
+}
 
 @end

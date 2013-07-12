@@ -12,6 +12,8 @@
 #import "AFCalendar.h"
 #import "AFDetails.h"
 
+#import "AFWasteTypePresenter.h"
+
 #import "MLPAccessoryBadge.h"
 
 @implementation AFViewController {
@@ -95,14 +97,19 @@
 -(UIView *)badgeFor:(NSInteger) index
 {
     if([calendar isSomethingBeingCollectedAt:index]) {
-        MLPAccessoryBadge *accessoryBadge = [MLPAccessoryBadge new];
-        [accessoryBadge setText:[calendar wasteTypeAt:index]];
-        [accessoryBadge setBackgroundColor:[calendar badgeColorAt:index]];
-        return accessoryBadge;
+        NSString * wasteType = [calendar wasteTypeAt:index];
+        return [self badgeForWasteType:wasteType];
     }
     return nil;
 }
 
+- (UIView*)badgeForWasteType:(NSString *)wasteType
+{
+    MLPAccessoryBadge *accessoryBadge = [MLPAccessoryBadge new];
+    [accessoryBadge setText:wasteType];
+    [accessoryBadge setBackgroundColor:[calendar badgeColorForWasteType:wasteType]];
+    return accessoryBadge;
+}
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
