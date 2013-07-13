@@ -7,7 +7,17 @@
 //
 
 #import "AFCalendarPresenter.h"
+#import "AFWasteTypePresenter.h"
 
 @implementation AFCalendarPresenter
+-(UIView *)badgeFor:(NSInteger) index;
+{
+    if([self.calendar isSomethingBeingCollectedAt:index]) {
+        AFWasteTypePresenter * pres = [[AFWasteTypePresenter alloc] init];
+        NSString * wasteType = [self.calendar wasteTypeAt:index];
+        return [pres badgeForWasteType:wasteType];
+    }
+    return nil;
+}
 
 @end

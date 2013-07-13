@@ -13,6 +13,7 @@
 #import "AFDetails.h"
 
 #import "AFWasteTypePresenter.h"
+#import "AFCalendarPresenter.h"
 
 #import "MLPAccessoryBadge.h"
 
@@ -77,8 +78,10 @@
     UITableViewCell * cell = [self makeCell:tableView];
     NSInteger index = indexPath.row;
 
+    AFCalendarPresenter * presenter = [[AFCalendarPresenter alloc]init];
+    presenter.calendar = calendar;
     cell.textLabel.text = [calendar humanDateAt:index];
-    cell.accessoryView = [self badgeFor:index];
+    cell.accessoryView = [presenter badgeFor:index];
 
     return cell;
 }
@@ -92,23 +95,6 @@
                                       reuseIdentifier:identifier];
     }
     return cell;
-}
-
--(UIView *)badgeFor:(NSInteger) index
-{
-    if([calendar isSomethingBeingCollectedAt:index]) {
-        NSString * wasteType = [calendar wasteTypeAt:index];
-        return [self badgeForWasteType:wasteType];
-    }
-    return nil;
-}
-
-- (UIView*)badgeForWasteType:(NSString *)wasteType
-{
-    MLPAccessoryBadge *accessoryBadge = [MLPAccessoryBadge new];
-    [accessoryBadge setText:wasteType];
-    [accessoryBadge setBackgroundColor:[calendar badgeColorForWasteType:wasteType]];
-    return accessoryBadge;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

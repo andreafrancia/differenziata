@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface AFWasteTypePresenter : NSObject
-
+- (UIColor *) wasteTypeColor:(NSString*) wasteType;
+- (UIView*)badgeForWasteType:(NSString *)wasteType;
 @end

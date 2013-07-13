@@ -9,12 +9,22 @@
 #import "AFRecyclingHintsViewController.h"
 #import "UIColor+MLPFlatColors.h"
 #import "MLPAccessoryBadge.h"
+#import "AFWasteTypePresenter.h"
+#import "AFCalendar.h"
 
 @interface AFRecyclingHints :NSObject
 
 @end
 
 @implementation AFRecyclingHints
+-(NSString*) thingAt:(NSInteger)index;
+{
+    return @"Giornali";
+}
+-(NSString*)collectorAt:(NSInteger)index;
+{
+    return kSecco;
+}
 -(NSInteger) count;
 {
     return 8;
@@ -69,14 +79,11 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if(!cell) cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                             reuseIdentifier:CellIdentifier];
-
-    cell.textLabel.text = @"Giornali";
     
-    MLPAccessoryBadge *accessoryBadge = [MLPAccessoryBadge new];
-    [accessoryBadge setText:@"carta"];
-    [accessoryBadge setBackgroundColor:[UIColor flatRedColor]];
-
-    cell.accessoryView = accessoryBadge;
+    cell.textLabel.text = [hints thingAt:indexPath.row];
+    
+    AFWasteTypePresenter * presenter = [AFWasteTypePresenter new];
+    cell.accessoryView = [presenter badgeForWasteType:kSecco];
     
     return cell;
 }

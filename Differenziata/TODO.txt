@@ -11,15 +11,18 @@ Done:
  x all'avvio scrollare alla data corrente [done: 27 jun]
  x aggiungere launch image [done: 28 jun] <1pom
  x prima sottomissione [done: 1 jul] 2pom
+ x spiegazione dei contenti del tipo di rifiuto [ 6pom]
 Backlog:
- - spiegazione dei contenti del tipo di rifiuto
-    x predisporre per la navigazione [4pom, 9 luglio]
-    x azzerare la selezione delle celle
-    x scrivere le descrizioni
-    x preparae la table per vedere le descrizioni
-    - rifare la launch image
+ - dove buttare cosa 
+   - spent: 1 pom 12 luglio
+   - data entry dei contenuti: 2 pom
+   - aggiungere la tab bar
+   - integrare nuova view nella tab bar
+   - trovare delle icone per la tab bar
+ - ricerca in dove buttare cosa
  - mettere il marrone per legno e ferro
  - mettere i giorni della settimana
  - togliere che si possono selezionare
  - backgorund image http://stackoverflow.com/a/5827775/36131
  - cell.selectionStyle = UITableViewCellSelectionStyleNone
+ - rifare la launch image

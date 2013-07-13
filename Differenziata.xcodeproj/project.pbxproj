@@ -30,6 +30,13 @@
 		65044A6D17900C5D00421E92 /* AFRecyclingHintsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65044A411790017F00421E92 /* AFRecyclingHintsViewController.m */; };
 		65044A711790140700421E92 /* AFCalendarPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65044A701790140600421E92 /* AFCalendarPresenter.m */; };
 		65044A751790145100421E92 /* AFWasteTypePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65044A741790145100421E92 /* AFWasteTypePresenter.m */; };
+		65044A761790242300421E92 /* AFCalendarPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65044A701790140600421E92 /* AFCalendarPresenter.m */; };
+		65044A771790242500421E92 /* AFWasteTypePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65044A741790145100421E92 /* AFWasteTypePresenter.m */; };
+		65044A781790243D00421E92 /* AFCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 650DCACB177708020004C4DE /* AFCalendar.m */; };
+		65044A791790243D00421E92 /* AFDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 650DCACE177742C00004C4DE /* AFDay.m */; };
+		65044A7A1790243D00421E92 /* NSDate+iso8601.m in Sources */ = {isa = PBXBuildFile; fileRef = 6505EBAD177C5F3A002D7428 /* NSDate+iso8601.m */; };
+		65044A7B1790243D00421E92 /* AFDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 651A3D27178CBFCF006D4C5C /* AFDetails.m */; };
+		65044A7C1790245500421E92 /* DDFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CB4CD217764B48003C8D42 /* DDFileReader.m */; };
 		6505EBAB177B4416002D7428 /* calendario.csv in Resources */ = {isa = PBXBuildFile; fileRef = 6505EBAA177B4416002D7428 /* calendario.csv */; };
 		6505EBAE177C5F3A002D7428 /* NSDate+iso8601.m in Sources */ = {isa = PBXBuildFile; fileRef = 6505EBAD177C5F3A002D7428 /* NSDate+iso8601.m */; };
 		6505EBD6177DB316002D7428 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6505EBD5177DB315002D7428 /* Default.png */; };
@@ -564,6 +571,13 @@
 			files = (
 				65044A6B17900C5800421E92 /* AFAppDelegate.m in Sources */,
 				65044A6C17900C5A00421E92 /* main.m in Sources */,
+				65044A761790242300421E92 /* AFCalendarPresenter.m in Sources */,
+				65044A781790243D00421E92 /* AFCalendar.m in Sources */,
+				65044A791790243D00421E92 /* AFDay.m in Sources */,
+				65044A7A1790243D00421E92 /* NSDate+iso8601.m in Sources */,
+				65044A7B1790243D00421E92 /* AFDetails.m in Sources */,
+				65044A771790242500421E92 /* AFWasteTypePresenter.m in Sources */,
+				65044A7C1790245500421E92 /* DDFileReader.m in Sources */,
 				65044A6D17900C5D00421E92 /* AFRecyclingHintsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

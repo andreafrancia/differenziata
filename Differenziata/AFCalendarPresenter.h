@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AFCalendar.h"
 
 @interface AFCalendarPresenter : NSObject
-
+@property(strong, nonatomic) AFCalendar* calendar;
+-(UIView *)badgeFor:(NSInteger) index;
 @end
