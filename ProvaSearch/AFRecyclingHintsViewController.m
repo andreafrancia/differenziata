@@ -11,32 +11,11 @@
 #import "MLPAccessoryBadge.h"
 #import "AFWasteTypePresenter.h"
 #import "AFCalendar.h"
-
-@interface AFRecyclingHints :NSObject
-
-@end
-
-@implementation AFRecyclingHints
--(NSString*) thingAt:(NSInteger)index;
-{
-    return @"Giornali";
-}
--(NSString*)collectorAt:(NSInteger)index;
-{
-    return kSecco;
-}
--(NSInteger) count;
-{
-    return 8;
-}
-@end
-
-@interface AFRecyclingHintsViewController ()
-
-@end
+#import "AFRecyclingHints.h"
 
 @implementation AFRecyclingHintsViewController {
     AFRecyclingHints * hints;
+    AFWasteTypePresenter * helper;
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -45,19 +24,15 @@
     if (self) {
         // Custom initialization
         hints = [[AFRecyclingHints alloc] init];
+        helper = [AFWasteTypePresenter new];
     }
     return self;
 }
 
-- (void)viewDidLoad
+-(void)viewDidLoad
 {
     [super viewDidLoad];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [hints loadFromFile];
 }
 
 #pragma mark - Table view data source
@@ -79,11 +54,12 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if(!cell) cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                             reuseIdentifier:CellIdentifier];
+    NSInteger index = indexPath.row;
     
-    cell.textLabel.text = [hints thingAt:indexPath.row];
+    cell.textLabel.text  = [hints thingAt:index];
     
-    AFWasteTypePresenter * presenter = [AFWasteTypePresenter new];
-    cell.accessoryView = [presenter badgeForWasteType:kSecco];
+    NSString * badgeText = [hints collectorTextAt:index];
+    cell.accessoryView = [helper badgeForWasteType:badgeText];
     
     return cell;
 }

@@ -100,6 +100,7 @@ NSString * kOlioDomestico = @"olio domestico";
     [_result addObject:day];
 }
 
+// TODO: rename loadFromFile
 -(void) parseFile:(NSString*) path
 {
     DDFileReader * reader = [[DDFileReader alloc] initWithFilePath:path];

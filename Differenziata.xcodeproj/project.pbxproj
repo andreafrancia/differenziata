@@ -65,6 +65,9 @@
 		654A39A4177645A800D0F06D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 654A39A2177645A800D0F06D /* InfoPlist.strings */; };
 		654A39A7177645A800D0F06D /* DifferenziataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 654A39A6177645A800D0F06D /* DifferenziataTests.m */; };
 		654A39B3177645F400D0F06D /* TODO.txt in Resources */ = {isa = PBXBuildFile; fileRef = 654A39B1177645F400D0F06D /* TODO.txt */; };
+		65B77576179136C1006854C3 /* AFRecyclingHintsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B77575179136C1006854C3 /* AFRecyclingHintsTests.m */; };
+		65B7757917913AD9006854C3 /* AFRecyclingHints.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B7757817913AD9006854C3 /* AFRecyclingHints.m */; };
+		65B7757A17913C95006854C3 /* AFRecyclingHints.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B7757817913AD9006854C3 /* AFRecyclingHints.m */; };
 		65CB4CD317764D68003C8D42 /* DDFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CB4CD217764B48003C8D42 /* DDFileReader.m */; };
 		65CB4CD417764DE2003C8D42 /* DDFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CB4CD217764B48003C8D42 /* DDFileReader.m */; };
 /* End PBXBuildFile section */
@@ -89,8 +92,8 @@
 		65044A20178FEFE700421E92 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		65044A22178FEFE700421E92 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		65044A24178FEFE700421E92 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		65044A401790017F00421E92 /* AFRecyclingHintsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFRecyclingHintsViewController.h; sourceTree = "<group>"; };
-		65044A411790017F00421E92 /* AFRecyclingHintsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFRecyclingHintsViewController.m; sourceTree = "<group>"; };
+		65044A401790017F00421E92 /* AFRecyclingHintsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFRecyclingHintsViewController.h; path = ../ProvaSearch/AFRecyclingHintsViewController.h; sourceTree = "<group>"; };
+		65044A411790017F00421E92 /* AFRecyclingHintsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFRecyclingHintsViewController.m; path = ../ProvaSearch/AFRecyclingHintsViewController.m; sourceTree = "<group>"; };
 		65044A6917900C0000421E92 /* Differenziata copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Differenziata copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65044A6A17900C0000421E92 /* Differenziata copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Differenziata copy-Info.plist"; path = "/Users/andrea/Differenziata/Differenziata copy-Info.plist"; sourceTree = "<absolute>"; };
 		65044A6F1790140600421E92 /* AFCalendarPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFCalendarPresenter.h; sourceTree = "<group>"; };
@@ -135,6 +138,9 @@
 		654A39A3177645A800D0F06D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		654A39A6177645A800D0F06D /* DifferenziataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DifferenziataTests.m; sourceTree = "<group>"; };
 		654A39B1177645F400D0F06D /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TODO.txt; path = Differenziata/TODO.txt; sourceTree = "<group>"; };
+		65B77575179136C1006854C3 /* AFRecyclingHintsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFRecyclingHintsTests.m; sourceTree = "<group>"; };
+		65B7757717913AD9006854C3 /* AFRecyclingHints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFRecyclingHints.h; sourceTree = "<group>"; };
+		65B7757817913AD9006854C3 /* AFRecyclingHints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFRecyclingHints.m; sourceTree = "<group>"; };
 		65CB4CD117764B48003C8D42 /* DDFileReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDFileReader.h; sourceTree = "<group>"; };
 		65CB4CD217764B48003C8D42 /* DDFileReader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDFileReader.m; sourceTree = "<group>"; };
 		8B542C4968A54FDCB492DFA2 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
@@ -183,8 +189,6 @@
 				65044A1D178FEFE700421E92 /* AFAppDelegate.h */,
 				65044A1E178FEFE700421E92 /* AFAppDelegate.m */,
 				65044A15178FEFE700421E92 /* Supporting Files */,
-				65044A401790017F00421E92 /* AFRecyclingHintsViewController.h */,
-				65044A411790017F00421E92 /* AFRecyclingHintsViewController.m */,
 			);
 			path = ProvaSearch;
 			sourceTree = "<group>";
@@ -257,11 +261,11 @@
 			children = (
 				654A3984177645A700D0F06D /* AFAppDelegate.h */,
 				654A3985177645A700D0F06D /* AFAppDelegate.m */,
-				65044A721790140D00421E92 /* presenter */,
 				65DAD5D017778CDD0011D95E /* controller */,
+				65044A721790140D00421E92 /* presenter */,
+				65DAD5CE17778CAF0011D95E /* model */,
 				654A397C177645A700D0F06D /* Supporting Files */,
 				65DAD5CF17778CBC0011D95E /* lib */,
-				65DAD5CE17778CAF0011D95E /* model */,
 			);
 			path = Differenziata;
 			sourceTree = "<group>";
@@ -286,6 +290,7 @@
 			children = (
 				654A39A6177645A800D0F06D /* DifferenziataTests.m */,
 				654A39A0177645A800D0F06D /* Supporting Files */,
+				65B77575179136C1006854C3 /* AFRecyclingHintsTests.m */,
 			);
 			path = DifferenziataTests;
 			sourceTree = "<group>";
@@ -329,6 +334,8 @@
 				6505EBAD177C5F3A002D7428 /* NSDate+iso8601.m */,
 				651A3D26178CBFCF006D4C5C /* AFDetails.h */,
 				651A3D27178CBFCF006D4C5C /* AFDetails.m */,
+				65B7757717913AD9006854C3 /* AFRecyclingHints.h */,
+				65B7757817913AD9006854C3 /* AFRecyclingHints.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -350,6 +357,8 @@
 				654A3990177645A800D0F06D /* AFViewController.xib */,
 				651A3D23178CA3C2006D4C5C /* AFDetailsViewController.h */,
 				651A3D24178CA3C2006D4C5C /* AFDetailsViewController.m */,
+				65044A401790017F00421E92 /* AFRecyclingHintsViewController.h */,
+				65044A411790017F00421E92 /* AFRecyclingHintsViewController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -576,9 +585,10 @@
 				65044A791790243D00421E92 /* AFDay.m in Sources */,
 				65044A7A1790243D00421E92 /* NSDate+iso8601.m in Sources */,
 				65044A7B1790243D00421E92 /* AFDetails.m in Sources */,
+				65B7757A17913C95006854C3 /* AFRecyclingHints.m in Sources */,
+				65044A6D17900C5D00421E92 /* AFRecyclingHintsViewController.m in Sources */,
 				65044A771790242500421E92 /* AFWasteTypePresenter.m in Sources */,
 				65044A7C1790245500421E92 /* DDFileReader.m in Sources */,
-				65044A6D17900C5D00421E92 /* AFRecyclingHintsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,6 +608,7 @@
 				65044A421790017F00421E92 /* AFRecyclingHintsViewController.m in Sources */,
 				65044A711790140700421E92 /* AFCalendarPresenter.m in Sources */,
 				65044A751790145100421E92 /* AFWasteTypePresenter.m in Sources */,
+				65B7757917913AD9006854C3 /* AFRecyclingHints.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,6 +618,7 @@
 			files = (
 				65CB4CD317764D68003C8D42 /* DDFileReader.m in Sources */,
 				654A39A7177645A800D0F06D /* DifferenziataTests.m in Sources */,
+				65B77576179136C1006854C3 /* AFRecyclingHintsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
