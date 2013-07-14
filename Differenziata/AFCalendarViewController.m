@@ -83,8 +83,8 @@
 
 - (void)scrollToTodayRow
 {
-    [calendar todayIs:[NSDate date]];
-    NSInteger todayIndex = [calendar todayIndex];
+    NSDate * today = [NSDate date];
+    NSInteger todayIndex = [calendar indexOfDay:today];
     
     NSIndexPath * indexPath = [NSIndexPath indexPathForRow:todayIndex
                                                  inSection:0];
@@ -127,12 +127,17 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
     NSInteger index = indexPath.row;
-    if([calendar hasDetailsAt:index]) {
-        AFDetailsViewController * detailsViewController  = [[AFDetailsViewController alloc] init];
-        detailsViewController.waste = [calendar detailsAt:index];
+    AFDetails * details = [calendar detailsAt:index];
+    
+    if(details) {
+        AFDetailsViewController * detailsViewController;
+        detailsViewController = [[AFDetailsViewController alloc] init];
+        detailsViewController.waste = details;
         
-        [self.navigationController pushViewController:detailsViewController animated:YES];
+        [self.navigationController pushViewController:detailsViewController
+                                             animated:YES];
     }
 }
 

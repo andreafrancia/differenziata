@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+
 #import "AFDay.h"
 
 extern NSString * kUmido;
@@ -31,18 +32,22 @@ extern NSString * kDittaSpecializzata;
 
 @property(readonly,nonatomic) NSArray* result;
 
-- (NSInteger) count;
+// file reading
 - (void) parseLine:(NSString*)line;
 - (void) parseFile:(NSString*) path;
 
+// attribute for cell
 - (NSString*) humanDateAt:(NSInteger) index;
 - (NSString*) wasteTypeAt:(NSInteger) index;
 
-- (void) todayIs:(NSDate*)date;
-- (NSUInteger) todayIndex;
+// jump to today
+- (NSUInteger) indexOfDay:(NSDate*)date;
 
+// number of row
+- (NSInteger) count;
+
+// navigation to day details
 - (AFDetails*) detailsAt:(NSInteger) index;
-- (BOOL) hasDetailsAt:(NSInteger) index;
 
 // badges
 - (UIColor *) badgeColorAt:(NSInteger) index;

@@ -7,10 +7,10 @@
 //
 
 #import "AFRecyclingHintsViewController.h"
+#import "AFCalendar.h"
 #import "UIColor+MLPFlatColors.h"
 #import "MLPAccessoryBadge.h"
 #import "AFWasteTypePresenter.h"
-#import "AFCalendar.h"
 #import "AFRecyclingHints.h"
 
 @implementation AFRecyclingHintsViewController {

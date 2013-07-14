@@ -1,1 +1,31 @@
-Differenziata/TODO.txt
+Release 1.0
+ x leggere una riga del calendario ed estrarre: data
+ x estrarre il primo rifiuto
+ x leggere tante righe di calendario
+ x configuare una UICellView che usa le info
+ x collegare la uitableview all'oggetto
+ x mettere i colori: 1 pom
+ x bug errore ultima cella: <1pom
+ x icona [done:25 jun]
+ x togliere la selezione delle celle [done: 25 jun]
+ x all'avvio scrollare alla data corrente [done: 27 jun]
+ x aggiungere launch image [done: 28 jun] <1pom
+ x prima sottomissione [done: 1 jul] 2pom
+Release 1.1
+ x spiegazione dei contenuti del tipo di rifiuto [ 6pom]
+Release 1.2:
+ - dove buttare cosa 
+   x imbastire view spent: 1 pom 12 luglio
+   x api del modello : 1pom, 13 luglio
+   x data entry dei contenuti: 2 pom. spent:2 pom
+   x aggiungere il file e leggerlo, spent: 3pom,
+   x usare sempre lo stesso colore per i recycling hints <1 pom
+   x aggiungere la finestra per le ricerche (2pom)
+   x riordinare il filesystem di progetto 1pom
+   x pulizia spent:2pom
+ - nuova immagine di avvio
+ - gestire le parole nascoste dai collector
+ - navigazione anche da "dove butto cosa?"
+ - scrivere la descrizione per tutti i collettori
+ - backgorund image http://stackoverflow.com/a/5827775/36131
+ - rifare la launch image

@@ -7,13 +7,12 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
+
 #import "AFRecyclingHints.h"
 #import "AFCalendar.h"
 
 @interface AFRecyclingHintsTests : SenTestCase
-
 @end
-
 @implementation AFRecyclingHintsTests
 
 -(void) test_should_parse_one_line
@@ -58,8 +57,7 @@
     [hints loadFromFile];
     
     STAssertEqualObjects([hints thingAt:0], @"abbigliamento", nil);
-    STAssertEqualObjects([hints collectorTextAt:0],
-                         @"contenitori stradali gialli CARITAS",  nil);
+    STAssertEqualObjects([hints collectorTextAt:0], kIndumentiUsati,  nil);
 }
 
 @end

@@ -8,13 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		620924253EA84CBB96D7F77A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C892C48969244AA4B0F4CDA0 /* libPods.a */; };
-		65044A421790017F00421E92 /* AFRecyclingHintsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65044A411790017F00421E92 /* AFRecyclingHintsViewController.m */; };
 		65044A711790140700421E92 /* AFCalendarPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65044A701790140600421E92 /* AFCalendarPresenter.m */; };
 		65044A751790145100421E92 /* AFWasteTypePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65044A741790145100421E92 /* AFWasteTypePresenter.m */; };
 		6505EBAE177C5F3A002D7428 /* NSDate+iso8601.m in Sources */ = {isa = PBXBuildFile; fileRef = 6505EBAD177C5F3A002D7428 /* NSDate+iso8601.m */; };
-		6505EBD6177DB316002D7428 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6505EBD5177DB315002D7428 /* Default.png */; };
-		6505EBD8177DB31B002D7428 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6505EBD7177DB31B002D7428 /* Default@2x.png */; };
-		6505EBDA177DB324002D7428 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6505EBD9177DB324002D7428 /* Default-568h@2x.png */; };
 		650DCACC177708020004C4DE /* AFCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 650DCACB177708020004C4DE /* AFCalendar.m */; };
 		650DCACF177742C00004C4DE /* AFDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 650DCACE177742C00004C4DE /* AFDay.m */; };
 		651A3D25178CA3C2006D4C5C /* AFDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 651A3D24178CA3C2006D4C5C /* AFDetailsViewController.m */; };
@@ -27,9 +23,6 @@
 		654A3980177645A700D0F06D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 654A397E177645A700D0F06D /* InfoPlist.strings */; };
 		654A3982177645A700D0F06D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 654A3981177645A700D0F06D /* main.m */; };
 		654A3986177645A700D0F06D /* AFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 654A3985177645A700D0F06D /* AFAppDelegate.m */; };
-		654A3988177645A800D0F06D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 654A3987177645A700D0F06D /* Default.png */; };
-		654A398A177645A800D0F06D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 654A3989177645A800D0F06D /* Default@2x.png */; };
-		654A398C177645A800D0F06D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 654A398B177645A800D0F06D /* Default-568h@2x.png */; };
 		654A398F177645A800D0F06D /* AFCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 654A398E177645A800D0F06D /* AFCalendarViewController.m */; };
 		654A3992177645A800D0F06D /* AFCalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 654A3990177645A800D0F06D /* AFCalendarViewController.xib */; };
 		654A399A177645A800D0F06D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654A3999177645A800D0F06D /* SenTestingKit.framework */; };
@@ -37,10 +30,13 @@
 		654A399C177645A800D0F06D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654A3977177645A700D0F06D /* Foundation.framework */; };
 		654A39A4177645A800D0F06D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 654A39A2177645A800D0F06D /* InfoPlist.strings */; };
 		654A39A7177645A800D0F06D /* DifferenziataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 654A39A6177645A800D0F06D /* DifferenziataTests.m */; };
-		654A39B3177645F400D0F06D /* TODO.txt in Resources */ = {isa = PBXBuildFile; fileRef = 654A39B1177645F400D0F06D /* TODO.txt */; };
+		6551C57F1793312800D0D67D /* AFRecyclingHintsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6551C57E1793312800D0D67D /* AFRecyclingHintsViewController.m */; };
+		6551C5801793312800D0D67D /* AFRecyclingHintsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6551C57E1793312800D0D67D /* AFRecyclingHintsViewController.m */; };
+		6551C5831793384C00D0D67D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6551C5821793384C00D0D67D /* Default.png */; };
+		6551C5851793385F00D0D67D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6551C5841793385E00D0D67D /* Default@2x.png */; };
+		6551C5871793386300D0D67D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6551C5861793386300D0D67D /* Default-568h@2x.png */; };
 		65B77576179136C1006854C3 /* AFRecyclingHintsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B77575179136C1006854C3 /* AFRecyclingHintsTests.m */; };
 		65B7757917913AD9006854C3 /* AFRecyclingHints.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B7757817913AD9006854C3 /* AFRecyclingHints.m */; };
-		65B7757C17915FD9006854C3 /* differenziata-calendario.csv in Resources */ = {isa = PBXBuildFile; fileRef = 65B7757B17915FD9006854C3 /* differenziata-calendario.csv */; };
 		65B7757F17916BE0006854C3 /* differenziata-calendario.csv in Resources */ = {isa = PBXBuildFile; fileRef = 65B7757D17916BE0006854C3 /* differenziata-calendario.csv */; };
 		65B7758017916BE0006854C3 /* differenziata-calendario.csv in Resources */ = {isa = PBXBuildFile; fileRef = 65B7757D17916BE0006854C3 /* differenziata-calendario.csv */; };
 		65B7758117916BE0006854C3 /* differenziata-dove-va-cosa.csv in Resources */ = {isa = PBXBuildFile; fileRef = 65B7757E17916BE0006854C3 /* differenziata-dove-va-cosa.csv */; };
@@ -60,18 +56,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		65044A401790017F00421E92 /* AFRecyclingHintsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFRecyclingHintsViewController.h; path = ../ProvaSearch/AFRecyclingHintsViewController.h; sourceTree = "<group>"; };
-		65044A411790017F00421E92 /* AFRecyclingHintsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFRecyclingHintsViewController.m; path = ../ProvaSearch/AFRecyclingHintsViewController.m; sourceTree = "<group>"; };
-		65044A6A17900C0000421E92 /* Differenziata copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Differenziata copy-Info.plist"; path = "/Users/andrea/Differenziata/Differenziata copy-Info.plist"; sourceTree = "<absolute>"; };
 		65044A6F1790140600421E92 /* AFCalendarPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFCalendarPresenter.h; sourceTree = "<group>"; };
 		65044A701790140600421E92 /* AFCalendarPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFCalendarPresenter.m; sourceTree = "<group>"; };
 		65044A731790145100421E92 /* AFWasteTypePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFWasteTypePresenter.h; sourceTree = "<group>"; };
 		65044A741790145100421E92 /* AFWasteTypePresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFWasteTypePresenter.m; sourceTree = "<group>"; };
 		6505EBAC177C5F3A002D7428 /* NSDate+iso8601.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+iso8601.h"; sourceTree = "<group>"; };
 		6505EBAD177C5F3A002D7428 /* NSDate+iso8601.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+iso8601.m"; sourceTree = "<group>"; };
-		6505EBD5177DB315002D7428 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		6505EBD7177DB31B002D7428 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		6505EBD9177DB324002D7428 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		650DCACA177708020004C4DE /* AFCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFCalendar.h; sourceTree = "<group>"; };
 		650DCACB177708020004C4DE /* AFCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFCalendar.m; sourceTree = "<group>"; };
 		650DCACD177742C00004C4DE /* AFDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFDay.h; sourceTree = "<group>"; };
@@ -92,9 +82,6 @@
 		654A3983177645A700D0F06D /* Differenziata-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Differenziata-Prefix.pch"; sourceTree = "<group>"; };
 		654A3984177645A700D0F06D /* AFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFAppDelegate.h; sourceTree = "<group>"; };
 		654A3985177645A700D0F06D /* AFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFAppDelegate.m; sourceTree = "<group>"; };
-		654A3987177645A700D0F06D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		654A3989177645A800D0F06D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		654A398B177645A800D0F06D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		654A398D177645A800D0F06D /* AFCalendarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFCalendarViewController.h; sourceTree = "<group>"; };
 		654A398E177645A800D0F06D /* AFCalendarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFCalendarViewController.m; sourceTree = "<group>"; };
 		654A3991177645A800D0F06D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AFCalendarViewController.xib; sourceTree = "<group>"; };
@@ -103,11 +90,15 @@
 		654A39A1177645A800D0F06D /* DifferenziataTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DifferenziataTests-Info.plist"; sourceTree = "<group>"; };
 		654A39A3177645A800D0F06D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		654A39A6177645A800D0F06D /* DifferenziataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DifferenziataTests.m; sourceTree = "<group>"; };
-		654A39B1177645F400D0F06D /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TODO.txt; path = Differenziata/TODO.txt; sourceTree = "<group>"; };
+		6551C57D1793312700D0D67D /* AFRecyclingHintsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFRecyclingHintsViewController.h; sourceTree = "<group>"; };
+		6551C57E1793312800D0D67D /* AFRecyclingHintsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFRecyclingHintsViewController.m; sourceTree = "<group>"; };
+		6551C5811793320700D0D67D /* TODO.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = TODO.txt; sourceTree = "<group>"; };
+		6551C5821793384C00D0D67D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		6551C5841793385E00D0D67D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		6551C5861793386300D0D67D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		65B77575179136C1006854C3 /* AFRecyclingHintsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFRecyclingHintsTests.m; sourceTree = "<group>"; };
 		65B7757717913AD9006854C3 /* AFRecyclingHints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFRecyclingHints.h; sourceTree = "<group>"; };
 		65B7757817913AD9006854C3 /* AFRecyclingHints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFRecyclingHints.m; sourceTree = "<group>"; };
-		65B7757B17915FD9006854C3 /* differenziata-calendario.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "differenziata-calendario.csv"; path = "database/differenziata-calendario.csv"; sourceTree = "<group>"; };
 		65B7757D17916BE0006854C3 /* differenziata-calendario.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "differenziata-calendario.csv"; path = "Differenziata/database/differenziata-calendario.csv"; sourceTree = "<group>"; };
 		65B7757E17916BE0006854C3 /* differenziata-dove-va-cosa.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "differenziata-dove-va-cosa.csv"; path = "Differenziata/database/differenziata-dove-va-cosa.csv"; sourceTree = "<group>"; };
 		65CB4CD117764B48003C8D42 /* DDFileReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDFileReader.h; sourceTree = "<group>"; };
@@ -155,16 +146,17 @@
 		654A3969177645A700D0F06D = {
 			isa = PBXGroup;
 			children = (
-				654A39B1177645F400D0F06D /* TODO.txt */,
+				6551C5861793386300D0D67D /* Default-568h@2x.png */,
+				6551C5841793385E00D0D67D /* Default@2x.png */,
+				6551C5821793384C00D0D67D /* Default.png */,
+				6551C5811793320700D0D67D /* TODO.txt */,
 				6558B30D1780C54800A25033 /* icons */,
 				654A397B177645A700D0F06D /* Differenziata */,
 				654A399F177645A800D0F06D /* DifferenziataTests */,
 				65B7758317916BEA006854C3 /* database */,
 				654A3974177645A700D0F06D /* Frameworks */,
-				6558B30C1780C4E000A25033 /* Launch Images */,
 				654A3973177645A700D0F06D /* Products */,
 				8B542C4968A54FDCB492DFA2 /* Pods.xcconfig */,
-				65044A6A17900C0000421E92 /* Differenziata copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -207,13 +199,9 @@
 			isa = PBXGroup;
 			children = (
 				654A397D177645A700D0F06D /* Differenziata-Info.plist */,
-				65B7757B17915FD9006854C3 /* differenziata-calendario.csv */,
 				654A397E177645A700D0F06D /* InfoPlist.strings */,
 				654A3981177645A700D0F06D /* main.m */,
 				654A3983177645A700D0F06D /* Differenziata-Prefix.pch */,
-				654A3987177645A700D0F06D /* Default.png */,
-				654A3989177645A800D0F06D /* Default@2x.png */,
-				654A398B177645A800D0F06D /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -235,16 +223,6 @@
 				654A39A2177645A800D0F06D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		6558B30C1780C4E000A25033 /* Launch Images */ = {
-			isa = PBXGroup;
-			children = (
-				6505EBD9177DB324002D7428 /* Default-568h@2x.png */,
-				6505EBD7177DB31B002D7428 /* Default@2x.png */,
-				6505EBD5177DB315002D7428 /* Default.png */,
-			);
-			name = "Launch Images";
 			sourceTree = "<group>";
 		};
 		6558B30D1780C54800A25033 /* icons */ = {
@@ -299,8 +277,8 @@
 				654A3990177645A800D0F06D /* AFCalendarViewController.xib */,
 				651A3D23178CA3C2006D4C5C /* AFDetailsViewController.h */,
 				651A3D24178CA3C2006D4C5C /* AFDetailsViewController.m */,
-				65044A401790017F00421E92 /* AFRecyclingHintsViewController.h */,
-				65044A411790017F00421E92 /* AFRecyclingHintsViewController.m */,
+				6551C57D1793312700D0D67D /* AFRecyclingHintsViewController.h */,
+				6551C57E1793312800D0D67D /* AFRecyclingHintsViewController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -380,19 +358,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				654A3980177645A700D0F06D /* InfoPlist.strings in Resources */,
-				654A3988177645A800D0F06D /* Default.png in Resources */,
-				654A398A177645A800D0F06D /* Default@2x.png in Resources */,
-				654A398C177645A800D0F06D /* Default-568h@2x.png in Resources */,
 				654A3992177645A800D0F06D /* AFCalendarViewController.xib in Resources */,
-				654A39B3177645F400D0F06D /* TODO.txt in Resources */,
 				65207E141778EBDE006255D4 /* recycle.png in Resources */,
 				65207E16177972A0006255D4 /* recycle@2x.png in Resources */,
-				6505EBD6177DB316002D7428 /* Default.png in Resources */,
-				6505EBD8177DB31B002D7428 /* Default@2x.png in Resources */,
-				6505EBDA177DB324002D7428 /* Default-568h@2x.png in Resources */,
-				65B7757C17915FD9006854C3 /* differenziata-calendario.csv in Resources */,
 				65B7757F17916BE0006854C3 /* differenziata-calendario.csv in Resources */,
 				65B7758117916BE0006854C3 /* differenziata-dove-va-cosa.csv in Resources */,
+				6551C5831793384C00D0D67D /* Default.png in Resources */,
+				6551C5851793385F00D0D67D /* Default@2x.png in Resources */,
+				6551C5871793386300D0D67D /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,10 +439,10 @@
 				6505EBAE177C5F3A002D7428 /* NSDate+iso8601.m in Sources */,
 				651A3D25178CA3C2006D4C5C /* AFDetailsViewController.m in Sources */,
 				651A3D28178CBFCF006D4C5C /* AFDetails.m in Sources */,
-				65044A421790017F00421E92 /* AFRecyclingHintsViewController.m in Sources */,
 				65044A711790140700421E92 /* AFCalendarPresenter.m in Sources */,
 				65044A751790145100421E92 /* AFWasteTypePresenter.m in Sources */,
 				65B7757917913AD9006854C3 /* AFRecyclingHints.m in Sources */,
+				6551C57F1793312800D0D67D /* AFRecyclingHintsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +453,7 @@
 				65CB4CD317764D68003C8D42 /* DDFileReader.m in Sources */,
 				654A39A7177645A800D0F06D /* DifferenziataTests.m in Sources */,
 				65B77576179136C1006854C3 /* AFRecyclingHintsTests.m in Sources */,
+				6551C5801793312800D0D67D /* AFRecyclingHintsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,6 +497,7 @@
 /* Begin XCBuildConfiguration section */
 		654A39A8177645A800D0F06D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B542C4968A54FDCB492DFA2 /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -554,6 +529,7 @@
 		};
 		654A39A9177645A800D0F06D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B542C4968A54FDCB492DFA2 /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -603,6 +579,7 @@
 		};
 		654A39AE177645A800D0F06D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B542C4968A54FDCB492DFA2 /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Differenziata.app/Differenziata";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -620,6 +597,7 @@
 		};
 		654A39AF177645A800D0F06D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B542C4968A54FDCB492DFA2 /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Differenziata.app/Differenziata";
 				FRAMEWORK_SEARCH_PATHS = (

@@ -6,14 +6,12 @@
 //  Copyright (c) 2013 Andrea Francia. All rights reserved.
 //
 
+#import <SenTestingKit/SenTestingKit.h>
+#import <UIKit/UIKit.h>
+
 #import "AFCalendar.h"
 #import "NSDate+iso8601.h"
-#import <UIKit/UIKit.h>
 #import "AFDetails.h"
-
-#import <SenTestingKit/SenTestingKit.h>
-
-
 
 @interface DifferenziataTests : SenTestCase
 @end
@@ -40,21 +38,10 @@
 {
     [calendar parseLine: @"2010-06-15,"];
     
-    BOOL result = [calendar hasDetailsAt:0];
+    AFDetails * details = [calendar detailsAt:0];
     
-    STAssertEquals(NO, result , nil);
+    STAssertEqualObjects(nil, details, nil);
 }
-
-
-- (void) test_details_present
-{
-    [calendar parseLine: @"2010-06-15,umido"];
-    
-    BOOL result = [calendar hasDetailsAt:0];
-    
-    STAssertEquals(YES, result , nil);
-}
-
 
 - (void) test_how_to_get_today_date
 {
@@ -65,12 +52,13 @@
 
 - (void) test
 {
-    [calendar todayIs:[NSDate fromIso8601:@"2010-06-15"]];
+    NSDate * today = [NSDate fromIso8601:@"2010-06-15"];
+    
     [calendar parseLine: @"2010-06-13,umido"];
     [calendar parseLine: @"2010-06-15,sporco"];
     [calendar parseLine: @"2010-06-18,sporco"];
 
-    NSInteger row = [calendar todayIndex];
+    NSInteger row = [calendar indexOfDay:today];
 
     STAssertEquals(1, row, nil);
 }
@@ -122,6 +110,5 @@
 
     STAssertEqualObjects(@"8 giu 2010", [calendar humanDateAt:0], nil);
 }
-
 
 @end

@@ -36,7 +36,6 @@ NSString * kColor = @"color";
 
 @implementation AFCalendar {
     NSMutableArray* _result;
-    NSDate * _today;
     NSDictionary * _wasteTypes;
 }
 
@@ -45,18 +44,12 @@ NSString * kColor = @"color";
     return [self.result count];
 }
 
-- (void) todayIs:(NSDate*)date
-{
-    _today = date;
-}
-
-- (NSUInteger) todayIndex
+- (NSUInteger) indexOfDay:(NSDate*)date;
 {
     return [_result indexOfObjectPassingTest:
-            ^BOOL(AFDay* day, NSUInteger idx, BOOL*stop)
-    {
-        return [day.date isEqualToString:[_today toIso8601]];
-    }];
+            ^BOOL(AFDay* day, NSUInteger idx, BOOL*stop) {
+                return [day.date isEqualToString:[date toIso8601]];
+            }];
 }
 
 -(id) init
@@ -161,6 +154,8 @@ NSString * kColor = @"color";
 
 - (AFDetails*) detailsAt:(NSInteger) index;
 {
+    if(![self hasDetailsAt:index]) return nil;
+    
     AFDetails * details = [[AFDetails alloc] init];
     AFDay * day = self.result[index];
     details.badgeColor = [self badgeColorAt:index];
