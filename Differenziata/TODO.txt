@@ -21,7 +21,7 @@ Release 1.2:
    x aggiungere il file e leggerlo, spent: 3pom,
    x usare sempre lo stesso colore per i recycling hints <1 pom
    - aggiungere la tab bar
-      - spike 1pom
+      x spike e refactor spent: 1pom
       - applicare 2pom
    - riordinare il filesystem di progetto
    - integrare nuova view nella tab bar
