@@ -1,4 +1,4 @@
-Done:
+Release 1.0
  x leggere una riga del calendario ed estrarre: data
  x estrarre il primo rifiuto
  x leggere tante righe di calendario
@@ -11,12 +11,16 @@ Done:
  x all'avvio scrollare alla data corrente [done: 27 jun]
  x aggiungere launch image [done: 28 jun] <1pom
  x prima sottomissione [done: 1 jul] 2pom
- x spiegazione dei contenti del tipo di rifiuto [ 6pom]
-Backlog:
+Release 1.1
+ x spiegazione dei contenuti del tipo di rifiuto [ 6pom]
+Release 1.2:
  - dove buttare cosa 
    x imbastire view spent: 1 pom 12 luglio
-   - modello : est 1 pom, 
-   - data entry dei contenuti: 2 pom
+   x api del modello : 1pom, 13 luglio
+   x data entry dei contenuti: 2 pom. spent:2 pom
+   - aggiungere il file e leggerlo, est: 2pom, spent: 2pom
+      - should skip empty lines
+   - riordinare il filesystem di progetto
    - aggiungere la tab bar
    - integrare nuova view nella tab bar
    - trovare delle icone per la tab bar

@@ -24,7 +24,7 @@
     // Override point for customization after application launch.
 
     self.parser = [[AFCalendar alloc] init];
-    [self.parser parseFile:[self pathTo:@"calendario.csv"]];
+    [self.parser parseFile:[self pathTo:@"differenziata-calendario.csv"]];
 
     self.viewController = [[AFViewController alloc] initWithCalendar:self.parser];
     UINavigationController * navigation = [[UINavigationController alloc]

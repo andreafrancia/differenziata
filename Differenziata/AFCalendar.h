@@ -39,7 +39,7 @@ extern NSString * kOlioDomestico;
 
 // badges
 - (UIColor *) badgeColorAt:(NSInteger) index;
-- (UIColor *) badgeColorForWasteType:(NSString*) wasteType;
++ (UIColor *) badgeColorForWasteType:(NSString*) wasteType;
 - (BOOL) isSomethingBeingCollectedAt:(NSInteger) index;
 
 @end

@@ -10,6 +10,7 @@
 
 @interface AFRecyclingHints : NSObject
 -(void) loadFromFile;
+-(void) parseLine:(NSString*)line;
 -(NSInteger) count;
 -(NSString*) thingAt:(NSInteger)index;
 -(NSString*) collectorTextAt:(NSInteger)index;

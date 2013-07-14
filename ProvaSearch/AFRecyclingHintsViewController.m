@@ -18,13 +18,13 @@
     AFWasteTypePresenter * helper;
 }
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (id)init
 {
-    self = [super initWithStyle:style];
+    self = [super init];
     if (self) {
-        // Custom initialization
         hints = [[AFRecyclingHints alloc] init];
         helper = [AFWasteTypePresenter new];
+        [hints loadFromFile];
     }
     return self;
 }
@@ -32,7 +32,6 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    [hints loadFromFile];
 }
 
 #pragma mark - Table view data source

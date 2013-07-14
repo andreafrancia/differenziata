@@ -87,6 +87,18 @@ NSString * kOlioDomestico = @"olio domestico";
     return 0;
 }
 
+// TODO: rename loadFromFile
+-(void) parseFile:(NSString*) path
+{
+    DDFileReader * reader = [[DDFileReader alloc] initWithFilePath:path];
+    
+    NSString* line = nil;
+    
+    while ((line = [reader readLine])) {
+        [self parseLine:line];
+    }
+}
+
 -(void) parseLine:(NSString*)line
 {
     AFDay * day = [AFDay new];
@@ -98,18 +110,6 @@ NSString * kOlioDomestico = @"olio domestico";
     day.what = split[1];
     
     [_result addObject:day];
-}
-
-// TODO: rename loadFromFile
--(void) parseFile:(NSString*) path
-{
-    DDFileReader * reader = [[DDFileReader alloc] initWithFilePath:path];
-    
-    NSString* line = nil;
-    
-    while ((line = [reader readLine])) {
-        [self parseLine:line];
-    }
 }
 
 - (AFDetails*) detailsAt:(NSInteger) index;
@@ -143,10 +143,10 @@ NSString * kOlioDomestico = @"olio domestico";
 - (UIColor *) badgeColorAt:(NSInteger) index;
 {
     NSString * type = [self typeAt:index];
-    return [self badgeColorForWasteType:type];
+    return [[self class] badgeColorForWasteType:type];
 }
 
-- (UIColor *) badgeColorForWasteType:(NSString*) wasteType;
++ (UIColor *) badgeColorForWasteType:(NSString*) wasteType;
 {
     return @{
             kUmido: [UIColor flatGreenColor],
