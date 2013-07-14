@@ -42,6 +42,15 @@
     STAssertEqualObjects([hints collectorTextAt:1], @"carta", nil);
 }
 
+-(void) test_should_ignore_empty_lines
+{
+    AFRecyclingHints * hints = [[AFRecyclingHints alloc]init];
+    
+    [hints parseLine:@","];
+    
+    STAssertEquals(0, [hints count],nil);
+}
+
 -(void) test_should_load_from_file;
 {
     AFRecyclingHints * hints = [[AFRecyclingHints alloc]init];
@@ -52,4 +61,5 @@
     STAssertEqualObjects([hints collectorTextAt:0],
                          @"contenitori stradali gialli CARITAS",  nil);
 }
+
 @end

@@ -14,4 +14,6 @@
 -(NSInteger) count;
 -(NSString*) thingAt:(NSInteger)index;
 -(NSString*) collectorTextAt:(NSInteger)index;
+
+-(NSString*) normalizeCollector:(NSString*) collector;
 @end

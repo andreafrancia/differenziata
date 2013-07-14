@@ -11,10 +11,12 @@
 #import "AFCalendar.h"
 #import "DDFileReader.h"
 
+
 @implementation AFRecyclingHints {
     NSMutableArray * things;
     NSMutableArray * collectors;
 }
+
 -(id) init;
 {
     if(self = [super init]) {
@@ -37,19 +39,29 @@
 -(void) parseLine:(NSString*)line;
 {
     line = [self cleanUp:line];
+    if([self lineShouldBeSkipped:line]) return;
+    
     NSArray * split = [line componentsSeparatedByString:@","];
-    
     NSString * thing = split[0];
-    NSString * collector = split[1];
+    NSString * collector = [self normalizeCollector:split[1]];
 
-    if ([collector isEqualToString:@"secco indifferenziato"] ) {
-        collector = kSecco;
-    } else if([collector isEqualToString:@"carta e cartone"]) {
-        collector = kCarta;
-    }
-    
     [things addObject:thing];
     [collectors addObject:collector];
+}
+
+-(BOOL) lineShouldBeSkipped:(NSString*) line
+{
+    return [line isEqualToString:@","];
+}
+
+-(NSString*) normalizeCollector:(NSString*) collector;
+{
+    if ([collector isEqualToString:@"secco indifferenziato"] ) {
+        return kSecco;
+    } else if([collector isEqualToString:@"carta e cartone"]) {
+        return kCarta;
+    } 
+    return collector;
 }
 
 -(NSString*) cleanUp:(NSString*) line;
