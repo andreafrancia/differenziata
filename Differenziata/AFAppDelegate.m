@@ -12,8 +12,6 @@
 #import "AFCalendar.h"
 
 @interface AFAppDelegate ()
-@property (strong, nonatomic) AFViewController *viewController;
-@property (strong, nonatomic) AFCalendar * parser;
 @end
 
 @implementation AFAppDelegate
@@ -22,28 +20,20 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-
-    self.parser = [[AFCalendar alloc] init];
-    [self.parser parseFile:[self pathTo:@"differenziata-calendario.csv"]];
-
-    self.viewController = [[AFViewController alloc] initWithCalendar:self.parser];
-    UINavigationController * navigation = [[UINavigationController alloc]
-                                           initWithRootViewController:self.viewController];
-    self.window.rootViewController = navigation;
+    
+    self.window.rootViewController = [self makeCalendarViewController];
 
     [self.window makeKeyAndVisible];
     return YES;
 }
 
-- (void)applicationWillEnterForeground:(UIApplication *)application
+-(UIViewController*) makeCalendarViewController;
 {
-    // TODO: should this be handled in some willAppear or similar of the Controller.
-    [self.viewController applicationWillEnterForeground:application];
-}
-
-- (NSString*) pathTo:(NSString*)path;
-{
-    return [[NSBundle mainBundle] pathForResource:path ofType:@""];
+    AFViewController *viewController;
+    viewController = [[AFViewController alloc] init];
+    UINavigationController * navigation = [[UINavigationController alloc]
+                                           initWithRootViewController:viewController];    
+    return navigation;
 }
 
 @end

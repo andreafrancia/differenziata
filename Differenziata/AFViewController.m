@@ -21,7 +21,21 @@
     AFCalendar * calendar;
 }
 
--(id) initWithCalendar:(AFCalendar *) aCalendar;
+-(id) init;
+{
+    self = [super initWithNibName:@"AFViewController" bundle:nil];
+    if(self) {
+        calendar = [[AFCalendar alloc] init];
+        [calendar parseFile:[self pathTo:@"differenziata-calendario.csv"]];
+    }
+    return self;
+}
+- (NSString*) pathTo:(NSString*)path;
+{
+    return [[NSBundle mainBundle] pathForResource:path ofType:@""];
+}
+
+-(id)initWithCalendar:(AFCalendar *) aCalendar;
 {
     self = [super initWithNibName:@"AFViewController" bundle:nil];
     if(self) {

@@ -19,8 +19,10 @@ Release 1.2:
    x api del modello : 1pom, 13 luglio
    x data entry dei contenuti: 2 pom. spent:2 pom
    x aggiungere il file e leggerlo, spent: 3pom,
-   - usare sempre lo stesso colore per i recycling hints
+   x usare sempre lo stesso colore per i recycling hints <1 pom
    - aggiungere la tab bar
+      - spike 1pom
+      - applicare 2pom
    - riordinare il filesystem di progetto
    - integrare nuova view nella tab bar
    - trovare delle icone per la tab bar
