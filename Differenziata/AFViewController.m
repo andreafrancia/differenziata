@@ -14,6 +14,7 @@
 
 #import "AFWasteTypePresenter.h"
 #import "AFCalendarPresenter.h"
+#import "AFRecyclingHintsViewController.h"
 
 #import "MLPAccessoryBadge.h"
 
@@ -52,8 +53,20 @@
                                    target:self
                                    action:@selector(scrollToTodayRow)];
     self.navigationItem.leftBarButtonItem = todayButton;
+    UIBarButtonItem *hintButton = [[UIBarButtonItem alloc]
+                                    initWithTitle:@"dove lo butto?"
+                                    style:UIBarButtonItemStyleBordered
+                                    target:self
+                                    action:@selector(showHints)];
+    self.navigationItem.rightBarButtonItem = hintButton;
 }
 
+-(void) showHints
+{
+    AFRecyclingHintsViewController * hints;
+    hints = [[AFRecyclingHintsViewController alloc] init];
+    [self.navigationController pushViewController:hints animated:YES];
+}
 
 - (void)viewDidAppear:(BOOL)animated {
     static BOOL first_time = YES;
