@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Andrea Francia. All rights reserved.
 //
 
-#import "AFViewController.h"
+#import "AFCalendarViewController.h"
 #import "AFDetailsViewController.h"
 
 #import "AFCalendar.h"
@@ -18,13 +18,13 @@
 
 #import "MLPAccessoryBadge.h"
 
-@implementation AFViewController {
+@implementation AFCalendarViewController {
     AFCalendar * calendar;
 }
 
 -(id) init;
 {
-    self = [super initWithNibName:@"AFViewController" bundle:nil];
+    self = [super initWithNibName:@"AFCalendarViewController" bundle:nil];
     if(self) {
         calendar = [[AFCalendar alloc] init];
         [calendar parseFile:[self pathTo:@"differenziata-calendario.csv"]];
@@ -38,7 +38,7 @@
 
 -(id)initWithCalendar:(AFCalendar *) aCalendar;
 {
-    self = [super initWithNibName:@"AFViewController" bundle:nil];
+    self = [super initWithNibName:@"AFCalendarViewController" bundle:nil];
     if(self) {
         calendar = aCalendar;
     }

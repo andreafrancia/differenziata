@@ -56,11 +56,19 @@
 
 -(NSString*) normalizeCollector:(NSString*) collector;
 {
-    if ([collector isEqualToString:@"secco indifferenziato"] ) {
+    if ([collector isEqualToString:@"secco indifferenziato"] )
         return kSecco;
-    } else if([collector isEqualToString:@"carta e cartone"]) {
+    if ([collector isEqualToString:@"carta e cartone"])
         return kCarta;
-    } 
+    if ([collector isEqualToString:@"vetro e alluminio"])
+        return kVetroAlluminio;
+    if ([collector isEqualToString:@"legno e ferro"])
+        return kLegnoFerro;
+    if ([collector isEqualToString:@"contenitore c/o ambulatori medici"])
+        return kMedicinaliScaduti;
+    if ([collector isEqualToString:@"contenitori stradali gialli CARITAS"])
+        return kIndumentiUsati;
+
     return collector;
 }
 

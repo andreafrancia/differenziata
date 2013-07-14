@@ -23,6 +23,16 @@ NSString * kVetroAlluminio = @"vetro - alluminio";
 NSString * kIngombranti = @"ingombranti";
 NSString * kLegnoFerro = @"legno - ferro";
 NSString * kOlioDomestico = @"olio domestico";
+NSString * kNeonLampadine = @"neon e lampadine";
+NSString * kPileEsaurite = @"pile esaurite";
+NSString * kMedicinaliScaduti = @"medicinali scaduti";
+NSString * kIndumentiUsati = @"raccoglitori CARITAS";
+NSString * kElettrodomestici = @"elettrodomestici RAEE";
+NSString * kPiazzolaEcologica = @"piazzola ecologica";
+NSString * kDittaSpecializzata = @"ditta specializzata";
+
+NSString * desc = @"desc";
+NSString * kColor = @"color";
 
 @implementation AFCalendar {
     NSMutableArray* _result;
@@ -55,16 +65,53 @@ NSString * kOlioDomestico = @"olio domestico";
         _result = [NSMutableArray new];
         _wasteTypes =
         @{
-          kUmido: @"I rifiuti umidi sono scarti alimentari e organici come ossi, avanzi di carte, bucce e scarti di verdure e frutta fresca e secca, gusci di uova, fondi di caffè, the e tisane, avanzi di pane, pasta, riso, farine, resti di pulitura di pesci e polli, escrementi di animali domestici",
-          kSecco: @"I rifiuti secchi sono carte sporche, oggetti di porcellana, ceramica, terracotta, contenitori di cartone per latte e succhi di frutta, assorbenti igenici e pannolini, lettiere per gatti, rasoi usa e getta, guarnizioni in gomma, musicassette, videocassette, stracci unti e sporchi, vaschette di polistirolo, giocattoli",
-          kPlastica: @"Gli oggetti di plastica quali tappi, bottiglie d'acqua o di bibite senza tappo e ben schiacciate per far sì che occupino meno spazio, flaconi di prodotti per la casa, di bellezza, di detersivi e detergenti, vaschette per alimenti e vasetti di yogurt ben lavati e privi di residui.",
-          kCarta: @"La carta pulita: giornali, riviste, sacchetti e buste di carta, scatole di cartone aperte e ripiegate, ben avvolti e senza buste di plastica.",
-          kVetroAlluminio: @"Tutti gli oggetti di vetro (bottiglie e vasetti), scatole di tonno, piselli, pelati, ecc. ben lavati e privi di residui, lattine di alluminio, tappi in metallo e barattoli.",
-          kIngombranti: @"I materiali o gli oggetti non in legno o in ferro oppure misti: quali divani, poltrone imbottite, mobili non in legno né in metallo, materassi, giocattoli voluminosi, oggetti in ceramica o in terracotta di grandi dimensioni, tappeti, tendaggi.",
-          kLegnoFerro: @"Il ferro ed il legno: mobili, serramenti, arredi metallici, canali di gronda, pentole, recipienti di metallo o di legno di grandi dimensioni, finestre in legno",
-          kOlioDomestico: @"Tutti gli oli ed i grassi di cottura e di frittura domestici, da versare nell'aposito contenitore verde con imbuto annesso.",
+          kUmido:
+              @{kColor:[UIColor flatGreenColor],
+                desc:@"I rifiuti umidi sono scarti alimentari e organici come ossi, avanzi di carte, bucce e scarti di verdure e frutta fresca e secca, gusci di uova, fondi di caffè, the e tisane, avanzi di pane, pasta, riso, farine, resti di pulitura di pesci e polli, escrementi di animali domestici",
+                },
+          kSecco:
+              @{kColor:[UIColor flatYellowColor],
+                desc:@"I rifiuti secchi sono carte sporche, oggetti di porcellana, ceramica, terracotta, contenitori di cartone per latte e succhi di frutta, assorbenti igenici e pannolini, lettiere per gatti, rasoi usa e getta, guarnizioni in gomma, musicassette, videocassette, stracci unti e sporchi, vaschette di polistirolo, giocattoli",
+                },
+          kPlastica:
+              @{kColor:[UIColor flatOrangeColor],
+                desc:@"Gli oggetti di plastica quali tappi, bottiglie d'acqua o di bibite senza tappo e ben schiacciate per far sì che occupino meno spazio, flaconi di prodotti per la casa, di bellezza, di detersivi e detergenti, vaschette per alimenti e vasetti di yogurt ben lavati e privi di residui.",
+                },
+          kCarta:
+              @{kColor:[UIColor flatRedColor],
+                desc:@"La carta pulita: giornali, riviste, sacchetti e buste di carta, scatole di cartone aperte e ripiegate, ben avvolti e senza buste di plastica.",
+                },
+          kVetroAlluminio:
+              @{kColor:[UIColor flatBlueColor],
+                desc:@"Tutti gli oggetti di vetro (bottiglie e vasetti), scatole di tonno, piselli, pelati, ecc. ben lavati e privi di residui, lattine di alluminio, tappi in metallo e barattoli.",
+                },
+          kIngombranti:
+              @{kColor:[UIColor flatDarkWhiteColor],
+                desc:@"I materiali o gli oggetti non in legno o in ferro oppure misti: quali divani, poltrone imbottite, mobili non in legno né in metallo, materassi, giocattoli voluminosi, oggetti in ceramica o in terracotta di grandi dimensioni, tappeti, tendaggi.",
+                },
+          kLegnoFerro:
+              @{kColor:[UIColor flatDarkOrangeColor],
+                desc:@"Il ferro ed il legno: mobili, serramenti, arredi metallici, canali di gronda, pentole, recipienti di metallo o di legno di grandi dimensioni, finestre in legno",
+                },
+          kOlioDomestico:
+              @{kColor:[UIColor flatDarkTealColor],
+                desc:@"Tutti gli oli ed i grassi di cottura e di frittura domestici, da versare nell'aposito contenitore verde con imbuto annesso.",
+                },
+          kPiazzolaEcologica:
+              @{kColor:[UIColor flatDarkGreenColor]},
+          kElettrodomestici:
+              @{kColor:[UIColor magentaColor]},
+          kNeonLampadine:
+              @{kColor:[UIColor blueColor]},
+          kPileEsaurite:
+              @{kColor:[UIColor orangeColor]},
+          kMedicinaliScaduti:
+              @{kColor:[UIColor redColor]},
+          kIndumentiUsati:
+              @{kColor:[UIColor magentaColor]},
+          kDittaSpecializzata:
+              @{kColor:[UIColor flatDarkPurpleColor]},
           };
-
     }
     return self;
 }
@@ -118,7 +165,7 @@ NSString * kOlioDomestico = @"olio domestico";
     AFDay * day = self.result[index];
     details.badgeColor = [self badgeColorAt:index];
     details.name = day.what;
-    details.description = _wasteTypes[day.what];
+    details.description = _wasteTypes[day.what][desc];
     
     return details;
 }
@@ -140,24 +187,17 @@ NSString * kOlioDomestico = @"olio domestico";
     return ! [wasteType isEqualToString:@""];
 }
 
+- (UIColor *) colorForCollector:(NSString*) collector;
+{
+    UIColor * color =  _wasteTypes[collector][kColor];
+    if(!color) color = [UIColor yellowColor];
+    return color;
+}
+
 - (UIColor *) badgeColorAt:(NSInteger) index;
 {
     NSString * type = [self typeAt:index];
-    return [[self class] badgeColorForWasteType:type];
-}
-
-+ (UIColor *) badgeColorForWasteType:(NSString*) wasteType;
-{
-    return @{
-            kUmido: [UIColor flatGreenColor],
-            kSecco: [UIColor flatYellowColor],
-            kPlastica: [UIColor flatOrangeColor],
-            kCarta: [UIColor flatRedColor],
-            kVetroAlluminio: [UIColor flatBlueColor],
-            kIngombranti: [UIColor flatDarkWhiteColor],
-            kLegnoFerro: [UIColor flatDarkOrangeColor],
-            kOlioDomestico: [UIColor flatDarkTealColor],
-    }[wasteType];
+    return [self colorForCollector:type];
 }
 
 @end

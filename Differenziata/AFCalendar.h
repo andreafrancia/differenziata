@@ -17,6 +17,13 @@ extern NSString * kVetroAlluminio;
 extern NSString * kIngombranti;
 extern NSString * kLegnoFerro;
 extern NSString * kOlioDomestico;
+extern NSString * kNeonLampadine;
+extern NSString * kPileEsaurite;
+extern NSString * kMedicinaliScaduti;
+extern NSString * kIndumentiUsati;
+extern NSString * kElettrodomestici;
+extern NSString * kPiazzolaEcologica;
+extern NSString * kDittaSpecializzata;
 
 @class AFDetails;
 
@@ -39,7 +46,7 @@ extern NSString * kOlioDomestico;
 
 // badges
 - (UIColor *) badgeColorAt:(NSInteger) index;
-+ (UIColor *) badgeColorForWasteType:(NSString*) wasteType;
 - (BOOL) isSomethingBeingCollectedAt:(NSInteger) index;
+- (UIColor *) colorForCollector:(NSString*) collector;
 
 @end

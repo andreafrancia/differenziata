@@ -15,16 +15,8 @@
 
 - (UIColor *) wasteTypeColor:(NSString*) wasteType;
 {
-    return @{
-             kUmido: [UIColor flatGreenColor],
-             kSecco: [UIColor flatYellowColor],
-             kPlastica: [UIColor flatOrangeColor],
-             kCarta: [UIColor flatRedColor],
-             kVetroAlluminio: [UIColor flatBlueColor],
-             kIngombranti: [UIColor flatDarkWhiteColor],
-             kLegnoFerro: [UIColor flatDarkOrangeColor],
-             kOlioDomestico: [UIColor flatDarkTealColor],
-             }[wasteType];
+    AFCalendar * calendar = [[AFCalendar alloc]init];
+    return [calendar colorForCollector:wasteType];
 }
 
 - (UIView*)badgeForWasteType:(NSString *)wasteType;

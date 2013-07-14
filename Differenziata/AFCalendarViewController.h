@@ -10,7 +10,7 @@
 
 @class AFCalendar;
 
-@interface AFViewController : UIViewController<UITableViewDataSource,
+@interface AFCalendarViewController : UIViewController<UITableViewDataSource,
                                                UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *table;
 - (id) initWithCalendar:(AFCalendar *) calendar;

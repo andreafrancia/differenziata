@@ -30,8 +30,8 @@
 		654A3988177645A800D0F06D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 654A3987177645A700D0F06D /* Default.png */; };
 		654A398A177645A800D0F06D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 654A3989177645A800D0F06D /* Default@2x.png */; };
 		654A398C177645A800D0F06D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 654A398B177645A800D0F06D /* Default-568h@2x.png */; };
-		654A398F177645A800D0F06D /* AFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 654A398E177645A800D0F06D /* AFViewController.m */; };
-		654A3992177645A800D0F06D /* AFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 654A3990177645A800D0F06D /* AFViewController.xib */; };
+		654A398F177645A800D0F06D /* AFCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 654A398E177645A800D0F06D /* AFCalendarViewController.m */; };
+		654A3992177645A800D0F06D /* AFCalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 654A3990177645A800D0F06D /* AFCalendarViewController.xib */; };
 		654A399A177645A800D0F06D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654A3999177645A800D0F06D /* SenTestingKit.framework */; };
 		654A399B177645A800D0F06D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654A3975177645A700D0F06D /* UIKit.framework */; };
 		654A399C177645A800D0F06D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654A3977177645A700D0F06D /* Foundation.framework */; };
@@ -95,9 +95,9 @@
 		654A3987177645A700D0F06D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		654A3989177645A800D0F06D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		654A398B177645A800D0F06D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		654A398D177645A800D0F06D /* AFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFViewController.h; sourceTree = "<group>"; };
-		654A398E177645A800D0F06D /* AFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFViewController.m; sourceTree = "<group>"; };
-		654A3991177645A800D0F06D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AFViewController.xib; sourceTree = "<group>"; };
+		654A398D177645A800D0F06D /* AFCalendarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFCalendarViewController.h; sourceTree = "<group>"; };
+		654A398E177645A800D0F06D /* AFCalendarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFCalendarViewController.m; sourceTree = "<group>"; };
+		654A3991177645A800D0F06D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AFCalendarViewController.xib; sourceTree = "<group>"; };
 		654A3998177645A800D0F06D /* DifferenziataTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DifferenziataTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		654A3999177645A800D0F06D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		654A39A1177645A800D0F06D /* DifferenziataTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DifferenziataTests-Info.plist"; sourceTree = "<group>"; };
@@ -294,9 +294,9 @@
 		65DAD5D017778CDD0011D95E /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				654A398D177645A800D0F06D /* AFViewController.h */,
-				654A398E177645A800D0F06D /* AFViewController.m */,
-				654A3990177645A800D0F06D /* AFViewController.xib */,
+				654A398D177645A800D0F06D /* AFCalendarViewController.h */,
+				654A398E177645A800D0F06D /* AFCalendarViewController.m */,
+				654A3990177645A800D0F06D /* AFCalendarViewController.xib */,
 				651A3D23178CA3C2006D4C5C /* AFDetailsViewController.h */,
 				651A3D24178CA3C2006D4C5C /* AFDetailsViewController.m */,
 				65044A401790017F00421E92 /* AFRecyclingHintsViewController.h */,
@@ -383,7 +383,7 @@
 				654A3988177645A800D0F06D /* Default.png in Resources */,
 				654A398A177645A800D0F06D /* Default@2x.png in Resources */,
 				654A398C177645A800D0F06D /* Default-568h@2x.png in Resources */,
-				654A3992177645A800D0F06D /* AFViewController.xib in Resources */,
+				654A3992177645A800D0F06D /* AFCalendarViewController.xib in Resources */,
 				654A39B3177645F400D0F06D /* TODO.txt in Resources */,
 				65207E141778EBDE006255D4 /* recycle.png in Resources */,
 				65207E16177972A0006255D4 /* recycle@2x.png in Resources */,
@@ -460,7 +460,7 @@
 				65CB4CD417764DE2003C8D42 /* DDFileReader.m in Sources */,
 				654A3982177645A700D0F06D /* main.m in Sources */,
 				654A3986177645A700D0F06D /* AFAppDelegate.m in Sources */,
-				654A398F177645A800D0F06D /* AFViewController.m in Sources */,
+				654A398F177645A800D0F06D /* AFCalendarViewController.m in Sources */,
 				650DCACC177708020004C4DE /* AFCalendar.m in Sources */,
 				650DCACF177742C00004C4DE /* AFDay.m in Sources */,
 				6505EBAE177C5F3A002D7428 /* NSDate+iso8601.m in Sources */,
@@ -502,12 +502,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		654A3990177645A800D0F06D /* AFViewController.xib */ = {
+		654A3990177645A800D0F06D /* AFCalendarViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				654A3991177645A800D0F06D /* en */,
 			);
-			name = AFViewController.xib;
+			name = AFCalendarViewController.xib;
 			sourceTree = "<group>";
 		};
 		654A39A2177645A800D0F06D /* InfoPlist.strings */ = {

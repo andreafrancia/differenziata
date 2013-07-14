@@ -7,7 +7,7 @@
 //
 
 #import "AFAppDelegate.h"
-#import "AFViewController.h"
+#import "AFCalendarViewController.h"
 #import "AFDetailsViewController.h"
 #import "AFCalendar.h"
 
@@ -29,8 +29,8 @@
 
 -(UIViewController*) makeCalendarViewController;
 {
-    AFViewController *viewController;
-    viewController = [[AFViewController alloc] init];
+    AFCalendarViewController *viewController;
+    viewController = [[AFCalendarViewController alloc] init];
     UINavigationController * navigation = [[UINavigationController alloc]
                                            initWithRootViewController:viewController];    
     return navigation;
