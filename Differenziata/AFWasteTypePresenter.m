@@ -29,9 +29,15 @@
 
 - (UIView*)badgeForWasteType:(NSString *)wasteType;
 {
+    return [self badgeWithText:wasteType
+                         color:[self wasteTypeColor:wasteType]];
+}
+
+- (UIView*)badgeWithText:(NSString *)wasteType color:(UIColor*)color;
+{
     MLPAccessoryBadge *accessoryBadge = [MLPAccessoryBadge new];
     [accessoryBadge setText:wasteType];
-    [accessoryBadge setBackgroundColor:[self wasteTypeColor:wasteType]];
+    [accessoryBadge setBackgroundColor:color];
     return accessoryBadge;
 }
 

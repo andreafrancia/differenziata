@@ -11,4 +11,5 @@
 @interface AFWasteTypePresenter : NSObject
 - (UIColor *) wasteTypeColor:(NSString*) wasteType;
 - (UIView*)badgeForWasteType:(NSString *)wasteType;
+- (UIView*)badgeWithText:(NSString *)wasteType color:(UIColor*)color;
 @end

@@ -64,7 +64,6 @@
 		654A39A7177645A800D0F06D /* DifferenziataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 654A39A6177645A800D0F06D /* DifferenziataTests.m */; };
 		654A39B3177645F400D0F06D /* TODO.txt in Resources */ = {isa = PBXBuildFile; fileRef = 654A39B1177645F400D0F06D /* TODO.txt */; };
 		6551C5091793039800D0D67D /* differenziata-dove-va-cosa.csv in Resources */ = {isa = PBXBuildFile; fileRef = 65B7757E17916BE0006854C3 /* differenziata-dove-va-cosa.csv */; };
-		6551C50B1793047C00D0D67D /* next-commit.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6551C50A1793047C00D0D67D /* next-commit.txt */; };
 		65B77576179136C1006854C3 /* AFRecyclingHintsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B77575179136C1006854C3 /* AFRecyclingHintsTests.m */; };
 		65B7757917913AD9006854C3 /* AFRecyclingHints.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B7757817913AD9006854C3 /* AFRecyclingHints.m */; };
 		65B7757A17913C95006854C3 /* AFRecyclingHints.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B7757817913AD9006854C3 /* AFRecyclingHints.m */; };
@@ -142,7 +141,6 @@
 		654A39A3177645A800D0F06D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		654A39A6177645A800D0F06D /* DifferenziataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DifferenziataTests.m; sourceTree = "<group>"; };
 		654A39B1177645F400D0F06D /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TODO.txt; path = Differenziata/TODO.txt; sourceTree = "<group>"; };
-		6551C50A1793047C00D0D67D /* next-commit.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "next-commit.txt"; path = "Differenziata/next-commit.txt"; sourceTree = "<group>"; };
 		65B77575179136C1006854C3 /* AFRecyclingHintsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFRecyclingHintsTests.m; sourceTree = "<group>"; };
 		65B7757717913AD9006854C3 /* AFRecyclingHints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFRecyclingHints.h; sourceTree = "<group>"; };
 		65B7757817913AD9006854C3 /* AFRecyclingHints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFRecyclingHints.m; sourceTree = "<group>"; };
@@ -229,7 +227,6 @@
 		654A3969177645A700D0F06D = {
 			isa = PBXGroup;
 			children = (
-				6551C50A1793047C00D0D67D /* next-commit.txt */,
 				654A39B1177645F400D0F06D /* TODO.txt */,
 				6558B30D1780C54800A25033 /* icons */,
 				654A397B177645A700D0F06D /* Differenziata */,
@@ -509,7 +506,6 @@
 				65B7757C17915FD9006854C3 /* differenziata-calendario.csv in Resources */,
 				65B7757F17916BE0006854C3 /* differenziata-calendario.csv in Resources */,
 				65B7758117916BE0006854C3 /* differenziata-dove-va-cosa.csv in Resources */,
-				6551C50B1793047C00D0D67D /* next-commit.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

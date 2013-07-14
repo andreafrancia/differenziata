@@ -58,7 +58,9 @@
     cell.textLabel.text  = [hints thingAt:index];
     
     NSString * badgeText = [hints collectorTextAt:index];
-    cell.accessoryView = [helper badgeForWasteType:badgeText];
+    UIColor * badgeColor = [UIColor flatDarkWhiteColor];
+    
+    cell.accessoryView = [helper badgeWithText:badgeText color:badgeColor];
     
     return cell;
 }

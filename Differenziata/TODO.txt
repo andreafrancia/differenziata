@@ -18,12 +18,14 @@ Release 1.2:
    x imbastire view spent: 1 pom 12 luglio
    x api del modello : 1pom, 13 luglio
    x data entry dei contenuti: 2 pom. spent:2 pom
-   - aggiungere il file e leggerlo, est: 2pom, spent: 2pom
-      - should skip empty lines
-   - riordinare il filesystem di progetto
+   x aggiungere il file e leggerlo, spent: 3pom,
+   - usare sempre lo stesso colore per i recycling hints
    - aggiungere la tab bar
+   - riordinare il filesystem di progetto
    - integrare nuova view nella tab bar
    - trovare delle icone per la tab bar
+   - normalizzare tutti i collector 
+   - accorciare i nomi dei collector lunghi
  - ricerca in dove buttare cosa
  - mettere il marrone per legno e ferro
  - mettere i giorni della settimana
