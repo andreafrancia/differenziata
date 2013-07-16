@@ -15,15 +15,6 @@
 
 @implementation AFDetailsViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 static NSString *WasteTypeCellIdentifier = @"Type";
 static NSString *WasteDescriptionCellIdentifier = @"Desc";
 
@@ -62,7 +53,6 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 
         cell.textLabel.text = self.waste.name;
     } else {
-
         cell = [tableView dequeueReusableCellWithIdentifier:WasteDescriptionCellIdentifier];
         if (cell == nil)
         {

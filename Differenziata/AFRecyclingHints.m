@@ -10,18 +10,36 @@
 
 #import "AFCalendar.h"
 #import "DDFileReader.h"
-
+@interface AFHint:NSObject
+@property(strong, nonatomic) NSString * thing;
+@property(strong, nonatomic) NSString * collector;
+@end
+@implementation AFHint
+-(id)initWithThing:(NSString*)thing collector:(NSString*)collector;
+{
+    if(self = [super init]) {
+        self.thing = thing;
+        self.collector = collector;
+    }
+    return self;
+}
+@end
 
 @implementation AFRecyclingHints {
-    NSMutableArray * things;
     NSMutableArray * collectors;
+    NSMutableArray * letters;
+    NSMutableDictionary * thingsByLetter;
+    NSMutableDictionary * hintsByLetter;
 }
 
 -(id) init;
 {
     if(self = [super init]) {
-        things = [[NSMutableArray alloc]init];
         collectors = [[NSMutableArray alloc]init];
+        thingsByLetter = [NSMutableDictionary new];
+
+        letters = [NSMutableArray new];
+        hintsByLetter = [NSMutableDictionary new];
     }
     return self;
 }
@@ -37,6 +55,7 @@
         [self parseLine:line];
     }
 }
+
 -(void) parseLine:(NSString*)line;
 {
     line = [self cleanUp:line];
@@ -46,8 +65,26 @@
     NSString * thing = split[0];
     NSString * collector = [self normalizeCollector:split[1]];
 
-    [things addObject:thing];
-    [collectors addObject:collector];
+    NSString * letter = [thing substringToIndex:1];
+    if(! [letter isEqualToString:[self lastLetter]]) {
+        [letters addObject:letter];
+        thingsByLetter[letter] = [NSMutableArray new]; //TODO:remove
+        hintsByLetter[letter] = [NSMutableArray new];
+    }
+    
+    [thingsByLetter[letter] addObject:thing]; //TODO
+    [collectors addObject:collector]; // TODO
+    
+    AFHint * hint = [[AFHint alloc] initWithThing:thing collector:collector];
+    [hintsByLetter[letter] addObject:hint];
+}
+
+-(NSString*)lastLetter
+{
+    if([letters count] > 0) {
+        return letters[[letters count]-1];
+    }
+    return nil;
 }
 
 -(BOOL) lineShouldBeSkipped:(NSString*) line
@@ -80,29 +117,41 @@
     return line;
 }
 
--(NSString*) collectorTextAt:(NSInteger)index;
+-(NSString*) collectorAt:(NSInteger)index inSection:(NSInteger)section;
 {
-    return collectors[index];
+    AFHint * hint = [self hintAtSection:section index:index];    
+    return hint.collector;
 }
+
+- (AFHint *)hintAtSection:(NSInteger)section index:(NSInteger)index
+{
+    NSArray *hintsForThisLetter = [self hintsInSection:section];
+    AFHint * hint = hintsForThisLetter[index];
+    return hint;
+}
+
+- (NSArray *)hintsInSection:(NSInteger)section
+{
+    NSString * letter = letters[section];
+    NSArray * hintsForThisLetter = hintsByLetter[letter];
+    return hintsForThisLetter;
+}
+
 
 -(NSString*) thingAt:(NSInteger)index inSection:(NSInteger)section;
 {
-    return things[index];
-}
-
--(NSString*) collectorAt:(NSInteger)index;
-{
-    return kSecco;
+    AFHint * hint = [self hintAtSection:section index:index];
+    return hint.thing;
 }
 
 -(NSInteger) countInSection:(NSInteger)section;
 {
-    return [things count];
+    return [[self hintsInSection:section] count];
 }
 
 -(NSInteger) numberOfSections;
 {
-    return 1;
+    return [letters count];
 }
 
 // TODO: duplicate

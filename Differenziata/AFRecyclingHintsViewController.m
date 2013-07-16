@@ -54,10 +54,11 @@
     if(!cell) cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                             reuseIdentifier:CellIdentifier];
     NSInteger index = indexPath.row;
+    NSInteger section = indexPath.section;
     
-    cell.textLabel.text  = [hints thingAt:index inSection:indexPath.section];
+    cell.textLabel.text  = [hints thingAt:index inSection:section];
     
-    NSString * badgeText = [hints collectorTextAt:index];    
+    NSString * badgeText = [hints collectorAt:index inSection:section];
     cell.accessoryView = [helper badgeForWasteType:badgeText];
     
     return cell;
