@@ -15,6 +15,15 @@
 @end
 @implementation AFRecyclingHintsTests
 
+-(void) test_should_support_quoted_fields
+{
+    AFRecyclingHints * hints = [[AFRecyclingHints alloc] init];
+    
+    [hints parseLine: @"\"aaa bbb\", secco"];
+    
+    STAssertEqualObjects(@"aaa bbb", [hints thingAt:0 inSection:0], nil);
+}
+
 -(void) test_should_have_one_section_for_each_initial_letter
 {
     AFRecyclingHints * hints = [[AFRecyclingHints alloc] init];
@@ -68,7 +77,7 @@
     [hints parseLine: @"accendino,111" ];
     [hints parseLine: @"agenda,222" ];
     [hints parseLine: @"budino,333" ];
-    
+
     STAssertEqualObjects([hints thingAt:0 inSection:0], @"accendino", nil);
     STAssertEqualObjects([hints thingAt:1 inSection:0], @"agenda", nil);
     STAssertEqualObjects([hints thingAt:0 inSection:1], @"budino", nil);
@@ -78,6 +87,16 @@
     STAssertEqualObjects([hints collectorAt:0 inSection:1], @"333", nil);
     
     STAssertEquals(2, [hints countInSection:0], nil);
+}
+
+-(void) test_section_letters_is_case_insensitive
+{
+    AFRecyclingHints * hints = [[AFRecyclingHints alloc] init];
+    
+    [hints parseLine: @"aaa,a" ];
+    [hints parseLine: @"Aaa,a" ];
+
+    STAssertEquals(1, [hints numberOfSections], nil);
 }
 
 -(void) test_should_ignore_empty_lines

@@ -26,18 +26,13 @@
 @end
 
 @implementation AFRecyclingHints {
-    NSMutableArray * collectors;
     NSMutableArray * letters;
-    NSMutableDictionary * thingsByLetter;
     NSMutableDictionary * hintsByLetter;
 }
 
 -(id) init;
 {
     if(self = [super init]) {
-        collectors = [[NSMutableArray alloc]init];
-        thingsByLetter = [NSMutableDictionary new];
-
         letters = [NSMutableArray new];
         hintsByLetter = [NSMutableDictionary new];
     }
@@ -56,6 +51,17 @@
     }
 }
 
+- (NSString *)addLetterIfNeeded:(NSString *)thing
+{
+    NSString * letter = [thing substringToIndex:1];
+    letter = [letter uppercaseString];
+    if(! [letter isEqualToString:[self lastLetter]]) {
+        [letters addObject:letter];
+        hintsByLetter[letter] = [NSMutableArray new];
+    }
+    return letter;
+}
+
 -(void) parseLine:(NSString*)line;
 {
     line = [self cleanUp:line];
@@ -63,18 +69,11 @@
 
     NSArray * split = [line componentsSeparatedByString:@","];
     NSString * thing = split[0];
+    thing = [thing stringByReplacingOccurrencesOfString:@"\"" withString:@""];
     NSString * collector = [self normalizeCollector:split[1]];
-
-    NSString * letter = [thing substringToIndex:1];
-    if(! [letter isEqualToString:[self lastLetter]]) {
-        [letters addObject:letter];
-        thingsByLetter[letter] = [NSMutableArray new]; //TODO:remove
-        hintsByLetter[letter] = [NSMutableArray new];
-    }
     
-    [thingsByLetter[letter] addObject:thing]; //TODO
-    [collectors addObject:collector]; // TODO
-    
+    NSString * letter = [self addLetterIfNeeded:thing];
+        
     AFHint * hint = [[AFHint alloc] initWithThing:thing collector:collector];
     [hintsByLetter[letter] addObject:hint];
 }
@@ -137,7 +136,6 @@
     return hintsForThisLetter;
 }
 
-
 -(NSString*) thingAt:(NSInteger)index inSection:(NSInteger)section;
 {
     AFHint * hint = [self hintAtSection:section index:index];
@@ -152,6 +150,11 @@
 -(NSInteger) numberOfSections;
 {
     return [letters count];
+}
+
+-(NSArray*) letters;
+{
+    return [letters copy];
 }
 
 // TODO: duplicate

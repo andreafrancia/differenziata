@@ -16,6 +16,7 @@
 -(NSInteger) countInSection:(NSInteger)section;
 -(NSString*) thingAt:(NSInteger)index inSection:(NSInteger)section;
 -(NSString*) collectorAt:(NSInteger)index inSection:(NSInteger)section;
+-(NSArray*) letters;
 
 -(NSString*) normalizeCollector:(NSString*) collector;
 @end

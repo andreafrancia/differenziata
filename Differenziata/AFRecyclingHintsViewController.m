@@ -20,7 +20,7 @@
 
 - (id)init
 {
-    self = [super init];
+    self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
         hints = [[AFRecyclingHints alloc] init];
         helper = [AFWasteTypePresenter new];
@@ -35,7 +35,10 @@
 }
 
 #pragma mark - Table view data source
-
+-(NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
+{
+    return [hints letters];
+}
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return [hints numberOfSections];
