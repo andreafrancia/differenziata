@@ -21,7 +21,7 @@
 
     [hints parseLine: @"accendino (scarico),secco indifferenziato" ];
 
-    NSString * thing = [hints thingAt:0];
+    NSString * thing = [hints thingAt:0 inSection:0];
     NSString * collectorText = [hints collectorTextAt:0];
     
     STAssertEqualObjects(thing,         @"accendino (scarico)", nil);
@@ -35,9 +35,9 @@
     [hints parseLine: @"accendino (scarico),secco indifferenziato" ];
     [hints parseLine: @"agenda telefonica (in carta),carta e cartone" ];
         
-    STAssertEqualObjects([hints thingAt:0],         @"accendino (scarico)", nil);
+    STAssertEqualObjects([hints thingAt:0 inSection:0], @"accendino (scarico)", nil);
     STAssertEqualObjects([hints collectorTextAt:0], kSecco, nil);
-    STAssertEqualObjects([hints thingAt:1],         @"agenda telefonica (in carta)", nil);
+    STAssertEqualObjects([hints thingAt:1 inSection:0], @"agenda telefonica (in carta)", nil);
     STAssertEqualObjects([hints collectorTextAt:1], @"carta", nil);
 }
 
@@ -47,7 +47,7 @@
     
     [hints parseLine:@","];
     
-    STAssertEquals(0, [hints count],nil);
+    STAssertEquals(0, [hints countInSection:0],nil);
 }
 
 -(void) test_should_load_from_file;
@@ -56,7 +56,7 @@
     
     [hints loadFromFile];
     
-    STAssertEqualObjects([hints thingAt:0], @"abbigliamento", nil);
+    STAssertEqualObjects([hints thingAt:0 inSection:0], @"abbigliamento", nil);
     STAssertEqualObjects([hints collectorTextAt:0], kIndumentiUsati,  nil);
 }
 

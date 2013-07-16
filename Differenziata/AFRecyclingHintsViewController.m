@@ -38,12 +38,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return [hints numberOfSections];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [hints count];
+    return [hints countInSection:section];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -55,7 +55,7 @@
                                             reuseIdentifier:CellIdentifier];
     NSInteger index = indexPath.row;
     
-    cell.textLabel.text  = [hints thingAt:index];
+    cell.textLabel.text  = [hints thingAt:index inSection:indexPath.section];
     
     NSString * badgeText = [hints collectorTextAt:index];    
     cell.accessoryView = [helper badgeForWasteType:badgeText];

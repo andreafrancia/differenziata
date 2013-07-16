@@ -25,13 +25,14 @@
     }
     return self;
 }
+
 -(void) loadFromFile;
 {
     NSString * path = [self pathTo:@"differenziata-dove-va-cosa.csv"];
     DDFileReader * reader = [[DDFileReader alloc] initWithFilePath:path];
-    
+
     NSString* line = nil;
-    
+
     while ((line = [reader readLine])) {
         [self parseLine:line];
     }
@@ -40,7 +41,7 @@
 {
     line = [self cleanUp:line];
     if([self lineShouldBeSkipped:line]) return;
-    
+
     NSArray * split = [line componentsSeparatedByString:@","];
     NSString * thing = split[0];
     NSString * collector = [self normalizeCollector:split[1]];
@@ -83,18 +84,25 @@
 {
     return collectors[index];
 }
--(NSString*) thingAt:(NSInteger)index;
+
+-(NSString*) thingAt:(NSInteger)index inSection:(NSInteger)section;
 {
     return things[index];
 }
 
--(NSString*)collectorAt:(NSInteger)index;
+-(NSString*) collectorAt:(NSInteger)index;
 {
     return kSecco;
 }
--(NSInteger) count;
+
+-(NSInteger) countInSection:(NSInteger)section;
 {
     return [things count];
+}
+
+-(NSInteger) numberOfSections;
+{
+    return 1;
 }
 
 // TODO: duplicate

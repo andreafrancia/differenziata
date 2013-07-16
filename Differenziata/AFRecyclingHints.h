@@ -11,8 +11,10 @@
 @interface AFRecyclingHints : NSObject
 -(void) loadFromFile;
 -(void) parseLine:(NSString*)line;
--(NSInteger) count;
--(NSString*) thingAt:(NSInteger)index;
+
+-(NSInteger) numberOfSections;
+-(NSInteger) countInSection:(NSInteger)section;
+-(NSString*) thingAt:(NSInteger)index inSection:(NSInteger)section;
 -(NSString*) collectorTextAt:(NSInteger)index;
 
 -(NSString*) normalizeCollector:(NSString*) collector;
