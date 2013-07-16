@@ -23,7 +23,8 @@ Release 1.2:
    x aggiungere la finestra per le ricerche (2pom)
    x riordinare il filesystem di progetto 1pom
    x pulizia spent:2pom
- - nuova immagine di avvio
+ - indice per "Dove Buttare cosa", spent: 3pom, done:16 luglio
+ - nuova immagine di avvio, spent:1pom, done:16 luglio
  - gestire le parole nascoste dai collector
  - navigazione anche da "dove butto cosa?"
  - scrivere la descrizione per tutti i collettori
