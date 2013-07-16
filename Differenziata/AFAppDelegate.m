@@ -11,9 +11,6 @@
 #import "AFDetailsViewController.h"
 #import "AFCalendar.h"
 
-@interface AFAppDelegate ()
-@end
-
 @implementation AFAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

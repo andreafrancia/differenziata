@@ -31,6 +31,7 @@
     }
     return self;
 }
+
 - (NSString*) pathTo:(NSString*)path;
 {
     return [[NSBundle mainBundle] pathForResource:path ofType:@""];
@@ -47,18 +48,30 @@
 
 -(void)viewDidLoad;
 {
-    UIBarButtonItem *todayButton = [[UIBarButtonItem alloc]
-                                   initWithTitle:@"oggi"
-                                   style:UIBarButtonItemStyleBordered
-                                   target:self
-                                   action:@selector(scrollToTodayRow)];
+    UIBarButtonItem *todayButton = [self makeTodayButton];
     self.navigationItem.leftBarButtonItem = todayButton;
-    UIBarButtonItem *hintButton = [[UIBarButtonItem alloc]
-                                    initWithTitle:@"dove lo butto?"
+    
+    UIBarButtonItem *hintButton = [self makeHintButton];
+    self.navigationItem.rightBarButtonItem = hintButton;
+}
+
+-(UIBarButtonItem*) makeTodayButton;
+{
+    UIBarButtonItem *todayButton = [[UIBarButtonItem alloc]
+                                    initWithTitle:@"oggi"
                                     style:UIBarButtonItemStyleBordered
                                     target:self
-                                    action:@selector(showHints)];
-    self.navigationItem.rightBarButtonItem = hintButton;
+                                    action:@selector(scrollToTodayRow)];
+    return todayButton;
+}
+-(UIBarButtonItem *) makeHintButton;
+{
+    UIBarButtonItem *hintButton = [[UIBarButtonItem alloc]
+                                   initWithTitle:@"dove lo butto?"
+                                   style:UIBarButtonItemStyleBordered
+                                   target:self
+                                   action:@selector(showHints)];
+    return hintButton;
 }
 
 -(void) showHints
