@@ -29,16 +29,13 @@
     return self;
 }
 
--(void)viewDidLoad
-{
-    [super viewDidLoad];
-}
+#pragma mark - UITableViewDataSource
 
-#pragma mark - Table view data source
 -(NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
 {
     return [hints letters];
 }
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return [hints numberOfSections];

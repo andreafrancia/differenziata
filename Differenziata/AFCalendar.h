@@ -34,7 +34,7 @@ extern NSString * kDittaSpecializzata;
 
 // file reading
 - (void) parseLine:(NSString*)line;
-- (void) parseFile:(NSString*) path;
+- (void) loadFromFile:(NSString*) path;
 
 // attribute for cell
 - (NSString*) humanDateAt:(NSInteger) index;

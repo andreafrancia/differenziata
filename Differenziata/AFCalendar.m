@@ -91,17 +91,23 @@ NSString * kColor = @"color";
                 desc:@"Tutti gli oli ed i grassi di cottura e di frittura domestici, da versare nell'aposito contenitore verde con imbuto annesso.",
                 },
           kPiazzolaEcologica:
-              @{kColor:[UIColor flatDarkGreenColor]},
+              @{kColor:[UIColor flatDarkGreenColor],
+                desc:@"Nelle piazzole ecologiche comunali continueranno ad essere depositati anche: erba dei giardini, foglie secche, potature di alberi, fiori appassiti, scarti dell'orto. L'area di Zerbolò é aperta ogni Sabato dalle 9.00 alle 11.00 da marzo a novembre (solo per il verde). L'area di Parasacco é aperta ogni mercoledì dalle 17.30 alle 18.30 da marzo a ottobre, dalle 16.00 alle 17.00 da novembre a febbraio, mentre é aperta ogni Sabato dalle 15.00 alle 17.00 tutto l'anno."},
           kElettrodomestici:
-              @{kColor:[UIColor magentaColor]},
+              @{kColor:[UIColor magentaColor],
+                desc:@"Il ritiro a domicilio di televisori, frigoriferi, congelatori, computer, lavatrici, lavastoviglie, condizionatori, cucine elettriche o a gas... deve essere richiesto in Comune al numero 0382818672 ed è gratis per i piccoli elettrodomestici., al costo di 5 euro per i medi, di 10 euro per i grandi. Il conferimento alla piazzola di Parasacco a cura dei cittadini è sempre gratuito negli orari e giorni stabiliti."},
           kNeonLampadine:
-              @{kColor:[UIColor blueColor]},
+              @{kColor:[UIColor blueColor],
+                desc: @"Devono essere posizionati negli appositi contenitori: a Zerbolò presso la Palestra comunale ed a Parasacco presso la Piazzola ecologica."},
           kPileEsaurite:
-              @{kColor:[UIColor orangeColor]},
+              @{kColor:[UIColor orangeColor],
+                desc: @"Dovranno essere depositate negli appositi contenitori: a Parasacco vicino a Parco giochi - a Zerbolò vicino alla ex Cooperativa alimentare."},
           kMedicinaliScaduti:
-              @{kColor:[UIColor redColor]},
+              @{kColor:[UIColor redColor],
+                desc: @"Dovranno essere depositati negli appositi contenitori situati presso le sale d'aspetto degli Ambulatori medici di Zerbolò e Parasacco. "},
           kIndumentiUsati:
-              @{kColor:[UIColor magentaColor]},
+              @{kColor:[UIColor magentaColor],
+                desc:@"Gli abiti, i cappotti, le scarpe, ecc., riposti in saccheti ben chiusi, dovranno essere  messi negli appositi contenitori Caritas: a Parasacco vicino al parco giochi - a Zerbolò vicino al Campo sportivo."},
           kDittaSpecializzata:
               @{kColor:[UIColor flatDarkPurpleColor]},
           };
@@ -121,14 +127,7 @@ NSString * kColor = @"color";
     return day.what;
 }
 
-
--(NSInteger) indexOf:(NSDate*) date
-{
-    return 0;
-}
-
-// TODO: rename loadFromFile
--(void) parseFile:(NSString*) path
+-(void) loadFromFile:(NSString*) path
 {
     DDFileReader * reader = [[DDFileReader alloc] initWithFilePath:path];
     

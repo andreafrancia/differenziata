@@ -27,7 +27,7 @@
     self = [super initWithNibName:@"AFCalendarViewController" bundle:nil];
     if(self) {
         calendar = [[AFCalendar alloc] init];
-        [calendar parseFile:[self pathTo:@"differenziata-calendario.csv"]];
+        [calendar loadFromFile:[self pathTo:@"differenziata-calendario.csv"]];
     }
     return self;
 }

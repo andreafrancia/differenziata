@@ -75,7 +75,7 @@
 
 - (void) test_should_read_from_a_csv_file
 {
-    [calendar parseFile: [self pathFor:@"calendario.csv"]];
+    [calendar loadFromFile: [self pathFor:@"calendario.csv"]];
 
     NSInteger dec31index = [calendar.result count] - 1;
     AFDay * dec31 = calendar.result[dec31index];
